@@ -7,7 +7,7 @@ function App() {
       <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] md: gap-3">
 
         {/* left */}
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-3">
 
           {/* profile */}
           <div className="bg-[#161616] p-4 rounded border border-[#353535] flex flex-col gap-3">
@@ -28,27 +28,27 @@ function App() {
         </div>
 
         {/* right */}
-        <div className="flex flex-col bg-[#161616] rounded p-4 border border-[#353535] gap-3">
-          <p className='text-xl font-bold'>Projects</p>
-          <div className='flex  flex-col bg-[#1d1c20] border border-[#3b3b3f] p-3 rounded gap-2'>
-            <p>Title</p>
-            <p className='text-sm text-white/50'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Pariatur, possimus facere explicabo ducimus voluptates 
-              dolor consequatur reprehenderit hic eius voluptatem eligendi</p>
+        <div className="flex flex-col gap-3">
+          <div className="bg-[#161616] p-4 rounded border border-[#353535]">
+            <p className='text-xl font-bold'>Projects</p>
           </div>
 
-          <div className='flex  flex-col bg-[#1d1c20] border border-[#3b3b3f] p-3 rounded gap-2'>
-            <p>Title</p>
-            <p className='text-sm text-white/50'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Pariatur, possimus facere explicabo ducimus voluptates 
-              dolor consequatur reprehenderit hic eius voluptatem eligendi</p>
+          <div className="bg-[#161616] p-4 rounded border border-[#353535]">
+            <p>Project 1</p>
+            <p className='text-sm text-white/50'>A brief description of the project and its features. 
+            A brief description of the project and its features.</p>
           </div>
 
-          <div className='flex  flex-col bg-[#1d1c20] border border-[#3b3b3f] p-3 rounded gap-2'>
-            <p>Title</p>
-            <p className='text-sm text-white/50'>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Pariatur, possimus facere explicabo ducimus voluptates 
-              dolor consequatur reprehenderit hic eius voluptatem eligendi</p>
+          <div className="bg-[#161616] p-4 rounded border border-[#353535]">
+            <p>Project 1</p>
+            <p className='text-sm text-white/50'>A brief description of the project and its features. 
+            A brief description of the project and its features.</p>
+          </div>
+
+          <div className="bg-[#161616] p-4 rounded border border-[#353535]">
+            <p>Project 1</p>
+            <p className='text-sm text-white/50'>A brief description of the project and its features. 
+            A brief description of the project and its features.</p>
           </div>
         </div>
 
