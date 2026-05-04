@@ -53,9 +53,20 @@ function App() {
           </div>
 
           {/* mid card */}
-          <div className="flex flex-col justify-between bg-[#161616] rounded-md p-4 border border-[#353535] ">
-            <div>
-              <p>test</p>
+          <div className="flex flex-col justify-between bg-[#161616] rounded-md p-4 border border-[#353535] gap-5">
+            <div className="flex flex-col grow gap-2">
+              <div className="flex flex-3 bg-white/10 rounded-md justify-center items-center">
+                img
+              </div>
+              <div className="flex flex-1 flex-col">
+                <p className="font-semibold">Adasd Sdas</p>
+                <p className="text-sm text-white/50">
+                  lkjhals d alks lkjsdlkj alskjd lkajs ldkj alksjd ijw doij sod
+                  lkajsdlkj lkas dlkj alkjs dlkj alskjd liwdj alisjd oijs doiajs
+                  doija oxcij akjsd kjahs dkuha iuwdh aoushc 8iwd has odh o8ahs
+                  o8xw o8dj ao8sd oaijsdo iajs odijw ldkja slkdj iwd o
+                </p>
+              </div>
             </div>
 
             <div className="flex items-center justify-center">
@@ -72,6 +83,22 @@ function App() {
           <div className="flex flex-col gap-3">
             <div className="bg-[#161616] p-4 rounded-md border border-[#353535]">
               <p className="text-xl font-bold">Projects</p>
+            </div>
+
+            <div className="bg-[#161616] p-4 rounded-md border border-[#353535]">
+              <p>Project 1</p>
+              <p className="text-sm text-white/50">
+                A brief description of the project and its features. A brief
+                description of the project and its features.
+              </p>
+            </div>
+
+            <div className="bg-[#161616] p-4 rounded-md border border-[#353535]">
+              <p>Project 1</p>
+              <p className="text-sm text-white/50">
+                A brief description of the project and its features. A brief
+                description of the project and its features.
+              </p>
             </div>
 
             <div className="bg-[#161616] p-4 rounded-md border border-[#353535]">
