@@ -53,8 +53,19 @@ function App() {
           </div>
 
           {/* mid card */}
-          <div className="bg-[#161616] rounded-md p-4 border border-[#353535]">
-            <p>test</p>
+          <div className="flex flex-col justify-between bg-[#161616] rounded-md p-4 border border-[#353535] ">
+            <div>
+              <p>test</p>
+            </div>
+
+            <div className="flex items-center justify-center">
+              <button
+                className="flex grow justify-center bg-[#272727] border border-[#353535] rounded py-2
+              hover:bg-[#2c2c2c] cursor-pointer"
+              >
+                See Live
+              </button>
+            </div>
           </div>
 
           {/* right */}
