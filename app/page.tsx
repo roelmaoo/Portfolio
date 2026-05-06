@@ -7,16 +7,11 @@ function App() {
           <div className="flex flex-col gap-3">
             {/* profile */}
             <div className="bg-[#161616] p-4 rounded-md border border-[#353535] flex flex-col gap-3">
+              <div className="bg-gray-500 border-2 border-dashed rounded-xl w-16 h-16" />
               <p className="font-semibold">Roel Docto Jr.</p>
               <p className="text-sm text-white/50 font-light leading-4">
-                A passionate developer.{" "}
-                <strong className="text-white font-semibold">
-                  Crafting solutions.
-                </strong>{" "}
-                <br /> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Neque, quia! Provident, quia recusandae officia rerum culpa
-                veniam cumque, veritatis minima, possimus ut odio. Nam sed ut
-                praesentium optio expedita dolorem.
+                Frontend Developer | UI/UX Designer | keyboard Enthusiast. Dog
+                lover
               </p>
             </div>
 
@@ -25,7 +20,7 @@ function App() {
               className="bg-[#161616] p-4 rounded-md border border-[#353535] flex grow flex-col gap-3\
           "
             >
-              <p>Tech Stack</p>
+              <p className="text-sm font-semibold">TECH STACK</p>
               <div className="grid grid-cols-5">
                 <div className="flex border border-[#353535] bg-[#272727] rounded-sm h-10 w-10 items-center justify-center">
                   L
