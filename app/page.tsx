@@ -96,7 +96,10 @@ function App() {
               </p>
             </div>
 
-            <div className="bg-[#161616] p-4 rounded-md border border-[#353535]">
+            <div
+              className="bg-[#161616] p-4 rounded-md border border-[#353535]
+            hover:bg-[#1d1d1d] hover:border-[#424242] cursor-pointer transition-all"
+            >
               <p>Project 1</p>
               <p className="text-sm text-white/50">
                 A brief description of the project and its features. A brief
@@ -104,7 +107,10 @@ function App() {
               </p>
             </div>
 
-            <div className="bg-[#161616] p-4 rounded-md border border-[#353535]">
+            <div
+              className="bg-[#161616] p-4 rounded-md border border-[#353535]
+            hover:bg-[#1d1d1d] hover:border-[#424242] cursor-pointer transition-all"
+            >
               <p>Project 1</p>
               <p className="text-sm text-white/50">
                 A brief description of the project and its features. A brief
@@ -112,7 +118,10 @@ function App() {
               </p>
             </div>
 
-            <div className="bg-[#161616] p-4 rounded-md border border-[#353535]">
+            <div
+              className="bg-[#161616] p-4 rounded-md border border-[#353535]
+            hover:bg-[#1d1d1d] hover:border-[#424242] cursor-pointer transition-all"
+            >
               <p>Project 1</p>
               <p className="text-sm text-white/50">
                 A brief description of the project and its features. A brief
@@ -120,7 +129,10 @@ function App() {
               </p>
             </div>
 
-            <div className="bg-[#161616] p-4 rounded-md border border-[#353535]">
+            <div
+              className="bg-[#161616] p-4 rounded-md border border-[#353535]
+            hover:bg-[#1d1d1d] hover:border-[#424242] cursor-pointer transition-all"
+            >
               <p>Project 1</p>
               <p className="text-sm text-white/50">
                 A brief description of the project and its features. A brief
