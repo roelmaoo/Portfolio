@@ -23,7 +23,7 @@ function App() {
           "
             >
               <p className="text-sm font-semibold">TECH STACK</p>
-              <div className="grid grid-cols-5">
+              <div className="grid">
                 <div className="flex border border-[#353535] bg-[#272727] rounded-sm h-10 w-10 items-center justify-center">
                   L
                 </div>
