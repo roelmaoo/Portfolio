@@ -1,4 +1,15 @@
 import Image from "next/image";
+import petLanding from "../public/pet-landing-site.png";
+
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
+  SiNodedotjs,
+  SiPostgresql,
+  SiPrisma,
+} from "react-icons/si"; // Example imports
 
 function App() {
   return (
@@ -18,32 +29,33 @@ function App() {
             </div>
 
             {/* tech stack */}
-            <div
-              className="bg-[#161616] p-4 rounded-md border border-[#353535] flex grow flex-col gap-3\
-          "
-            >
-              <p className="text-sm font-semibold">TECH STACK</p>
-              <div className="grid">
-                <div className="flex border border-[#353535] bg-[#272727] rounded-sm h-10 w-10 items-center justify-center">
-                  L
+            <div className="flex grow flex-col gap-3 rounded-md border border-[#353535] bg-[#161616] p-4">
+              <p className="text-xs font-semibold tracking-wider text-neutral-400">
+                TECH STACK
+              </p>
+
+              {/* Replaced 'grid' with a flexible, wrapping layout */}
+              <div className="flex flex-wrap gap-2">
+                <div className="flex h-10 w-10 items-center justify-center rounded-md border border-[#353535] bg-[#272727] text-[#neutral-200]">
+                  <SiReact size={20} />
                 </div>
-                <div className="flex border border-[#353535] bg-[#272727] rounded-sm h-10 w-10 items-center justify-center">
-                  L
+                <div className="flex h-10 w-10 items-center justify-center rounded-md border border-[#353535] bg-[#272727]">
+                  <SiNextdotjs size={20} />
                 </div>
-                <div className="flex border border-[#353535] bg-[#272727] rounded-sm h-10 w-10 items-center justify-center">
-                  L
+                <div className="flex h-10 w-10 items-center justify-center rounded-md border border-[#353535] bg-[#272727]">
+                  <SiTailwindcss size={20} />
                 </div>
-                <div className="flex border border-[#353535] bg-[#272727] rounded-sm h-10 w-10 items-center justify-center">
-                  L
+                <div className="flex h-10 w-10 items-center justify-center rounded-md border border-[#353535] bg-[#272727]">
+                  <SiTypescript size={18} />
                 </div>
-                <div className="flex border border-[#353535] bg-[#272727] rounded-sm h-10 w-10 items-center justify-center">
-                  L
+                <div className="flex h-10 w-10 items-center justify-center rounded-md border border-[#353535] bg-[#272727]">
+                  <SiNodedotjs size={20} />
                 </div>
-                <div className="flex border border-[#353535] bg-[#272727] rounded-sm h-10 w-10 items-center justify-center">
-                  L
+                <div className="flex h-10 w-10 items-center justify-center rounded-md border border-[#353535] bg-[#272727]">
+                  <SiPostgresql size={20} />
                 </div>
-                <div className="flex border border-[#353535] bg-[#272727] rounded-sm h-10 w-10 items-center justify-center">
-                  L
+                <div className="flex h-10 w-10 items-center justify-center rounded-md border border-[#353535] bg-[#272727]">
+                  <SiPrisma size={20} />
                 </div>
               </div>
             </div>
@@ -86,26 +98,44 @@ function App() {
 
           {/* right */}
           <div className="flex flex-col gap-3">
-            <div className="bg-[#161616] p-4 rounded-md border border-[#353535]">
-              <p className="text-xl font-bold">Projects</p>
-            </div>
+            <a
+              href="https://adoptstraydogs.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-col gap-3"
+            >
+              <div className="bg-[#161616] p-4 rounded-md border border-[#353535]">
+                <p className="text-xl font-bold">Projects</p>
+              </div>
+
+              <div
+                className="bg-[#161616] p-4 rounded-md border border-[#353535]
+            hover:bg-[#1d1d1d] hover:border-[#424242] cursor-pointer transition-all"
+              >
+                <div>
+                  <p className="pb-2">Project 1</p>
+                  <Image
+                    className="object-cover h-full overflow-hidden rounded-md"
+                    src={petLanding}
+                    alt="Stray Dogs Site"
+                    loading="lazy"
+                    width={800}
+                    height={0}
+                  />
+                  <p className="text-sm text-white/50 pt-2">
+                    A landing page for stray pets where users can book strays
+                    for a walk, or adoption.
+                  </p>
+                </div>
+              </div>
+            </a>
 
             <div
               className="bg-[#161616] p-4 rounded-md border border-[#353535]
             hover:bg-[#1d1d1d] hover:border-[#424242] cursor-pointer transition-all"
             >
               <p>Project 1</p>
-              <p className="text-sm text-white/50">
-                A brief description of the project and its features. A brief
-                description of the project and its features.
-              </p>
-            </div>
 
-            <div
-              className="bg-[#161616] p-4 rounded-md border border-[#353535]
-            hover:bg-[#1d1d1d] hover:border-[#424242] cursor-pointer transition-all"
-            >
-              <p>Project 1</p>
               <p className="text-sm text-white/50">
                 A brief description of the project and its features. A brief
                 description of the project and its features.
