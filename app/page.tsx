@@ -101,7 +101,7 @@ function App() {
             </div>
 
             <div
-              className="flex flex-col gap-3 overflow-y-auto h-150
+              className="flex flex-col gap-3 overflow-y-auto h-90 md:h-120 lg:h-150
             [&::-webkit-scrollbar]:hidden"
             >
               <a
