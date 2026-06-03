@@ -62,6 +62,9 @@ function App() {
           {/* mid card */}
           <div className="flex flex-col justify-between bg-[#161616] rounded-md p-4 border border-[#353535] gap-5">
             <div className="flex flex-col grow gap-2">
+              <div className="flex items-center gap-2 text-sm text-white/50 uppercase tracking-wider">
+                <p>Latest Project</p>
+              </div>
               <div className="flex bg-white/10 rounded-md justify-center items-center">
                 <Image
                   className="object-cover h-full overflow-hidden rounded-md"
@@ -115,7 +118,9 @@ function App() {
             hover:bg-[#1d1d1d] hover:border-[#424242] cursor-pointer transition-all"
                 >
                   <div>
-                    <p className="pb-2">Project 1</p>
+                    <p className="pb-2 text-sm text-white/50 uppercase tracking-wider">
+                      STRAY DOGS LANDING PAGE
+                    </p>
                     <Image
                       className="object-cover h-full overflow-hidden rounded-md"
                       src={petLanding}
@@ -124,7 +129,7 @@ function App() {
                       width={800}
                       height={0}
                     />
-                    <p className="text-sm text-white/50 pt-2">
+                    <p className="text-sm text-white/50 pt-2 uppercase">
                       A landing page for stray pets where users can book strays
                       for a walk, or adoption.
                     </p>
