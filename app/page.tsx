@@ -9,16 +9,15 @@ import {
   SiNodedotjs,
   SiPostgresql,
   SiPrisma,
-} from "react-icons/si"; // Example imports
+} from "react-icons/si";
 
 function App() {
   return (
     <>
-      <section className=" h-screen lg:w-3/4 mx-auto p-5 text-lg">
+      <section className=" h-screen xl:w-3/4 mx-auto p-5 text-lg">
         <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr_1fr] md: gap-3">
           {/* left */}
           <div className="flex flex-col gap-3">
-            {/* profile */}
             <div className="bg-[#161616] p-4 rounded-md border border-[#353535] flex flex-col gap-3">
               <div className="bg-gray-500 border-2 border-dashed rounded-xl w-16 h-16" />
               <p className="font-semibold">Roel Docto Jr.</p>
@@ -34,7 +33,6 @@ function App() {
                 TECH STACK
               </p>
 
-              {/* Replaced 'grid' with a flexible, wrapping layout */}
               <div className="flex flex-wrap gap-2">
                 <div className="flex h-10 w-10 items-center justify-center rounded-md border border-[#353535] bg-[#272727] text-[#neutral-200]">
                   <SiReact size={20} />
@@ -64,14 +62,14 @@ function App() {
           {/* mid card */}
           <div className="flex flex-col justify-between bg-[#161616] rounded-md p-4 border border-[#353535] gap-5">
             <div className="flex flex-col grow gap-2">
-              <div className="flex flex-3 bg-white/10 rounded-md justify-center items-center">
+              <div className="flex bg-white/10 rounded-md justify-center items-center">
                 <Image
                   className="object-cover h-full overflow-hidden rounded-md"
                   src="/iloilo-jeepney-routes-thumbnail.png"
                   alt="Iloilo Jeepney Routes Thumbnail"
                   loading="lazy"
                   width={800}
-                  height={800}
+                  height={0}
                 />
               </div>
               <div className="flex flex-1 flex-col">
@@ -83,7 +81,7 @@ function App() {
               </div>
             </div>
 
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center mt-10">
               <a
                 className="flex grow justify-center bg-[#272727] border border-[#353535] rounded py-2
               hover:bg-[#2c2c2c] cursor-pointer"
@@ -98,81 +96,97 @@ function App() {
 
           {/* right */}
           <div className="flex flex-col gap-3">
-            <a
-              href="https://adoptstraydogs.vercel.app"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col gap-3"
-            >
-              <div className="bg-[#161616] p-4 rounded-md border border-[#353535]">
-                <p className="text-xl font-bold">Projects</p>
-              </div>
+            <div className="bg-[#161616] p-4 rounded-md border border-[#353535]">
+              <p className="text-xl font-bold">Projects</p>
+            </div>
 
-              <div
-                className="bg-[#161616] p-4 rounded-md border border-[#353535]
-            hover:bg-[#1d1d1d] hover:border-[#424242] cursor-pointer transition-all"
+            <div
+              className="flex flex-col gap-3 overflow-y-auto h-150
+            [&::-webkit-scrollbar]:hidden"
+            >
+              <a
+                href="https://adoptstraydogs.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col gap-3"
               >
-                <div>
-                  <p className="pb-2">Project 1</p>
-                  <Image
-                    className="object-cover h-full overflow-hidden rounded-md"
-                    src={petLanding}
-                    alt="Stray Dogs Site"
-                    loading="lazy"
-                    width={800}
-                    height={0}
-                  />
-                  <p className="text-sm text-white/50 pt-2">
-                    A landing page for stray pets where users can book strays
-                    for a walk, or adoption.
-                  </p>
+                <div
+                  className="bg-[#161616] p-4 rounded-md border border-[#353535]
+            hover:bg-[#1d1d1d] hover:border-[#424242] cursor-pointer transition-all"
+                >
+                  <div>
+                    <p className="pb-2">Project 1</p>
+                    <Image
+                      className="object-cover h-full overflow-hidden rounded-md"
+                      src={petLanding}
+                      alt="Stray Dogs Site"
+                      loading="lazy"
+                      width={800}
+                      height={0}
+                    />
+                    <p className="text-sm text-white/50 pt-2">
+                      A landing page for stray pets where users can book strays
+                      for a walk, or adoption.
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
 
-            <div
-              className="bg-[#161616] p-4 rounded-md border border-[#353535]
+              <a
+                href="https://adoptstraydogs.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col gap-3"
+              >
+                <div
+                  className="bg-[#161616] p-4 rounded-md border border-[#353535]
             hover:bg-[#1d1d1d] hover:border-[#424242] cursor-pointer transition-all"
-            >
-              <p>Project 1</p>
+                >
+                  <div>
+                    <p className="pb-2">Project 1</p>
+                    <Image
+                      className="object-cover h-full overflow-hidden rounded-md"
+                      src={petLanding}
+                      alt="Stray Dogs Site"
+                      loading="lazy"
+                      width={800}
+                      height={0}
+                    />
+                    <p className="text-sm text-white/50 pt-2">
+                      A landing page for stray pets where users can book strays
+                      for a walk, or adoption.
+                    </p>
+                  </div>
+                </div>
+              </a>
 
-              <p className="text-sm text-white/50">
-                A brief description of the project and its features. A brief
-                description of the project and its features.
-              </p>
-            </div>
-
-            <div
-              className="bg-[#161616] p-4 rounded-md border border-[#353535]
+              <a
+                href="https://adoptstraydogs.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col gap-3"
+              >
+                <div
+                  className="bg-[#161616] p-4 rounded-md border border-[#353535]
             hover:bg-[#1d1d1d] hover:border-[#424242] cursor-pointer transition-all"
-            >
-              <p>Project 1</p>
-              <p className="text-sm text-white/50">
-                A brief description of the project and its features. A brief
-                description of the project and its features.
-              </p>
-            </div>
-
-            <div
-              className="bg-[#161616] p-4 rounded-md border border-[#353535]
-            hover:bg-[#1d1d1d] hover:border-[#424242] cursor-pointer transition-all"
-            >
-              <p>Project 1</p>
-              <p className="text-sm text-white/50">
-                A brief description of the project and its features. A brief
-                description of the project and its features.
-              </p>
-            </div>
-
-            <div
-              className="bg-[#161616] p-4 rounded-md border border-[#353535]
-            hover:bg-[#1d1d1d] hover:border-[#424242] cursor-pointer transition-all"
-            >
-              <p>Project 1</p>
-              <p className="text-sm text-white/50">
-                A brief description of the project and its features. A brief
-                description of the project and its features.
-              </p>
+                >
+                  <div>
+                    <p className="pb-2">Project 1</p>
+                    <Image
+                      className="object-cover h-full overflow-hidden rounded-md"
+                      src={petLanding}
+                      alt="Stray Dogs Site"
+                      loading="lazy"
+                      width={800}
+                      height={0}
+                    />
+                    <p className="text-sm text-white/50 pt-2">
+                      A landing page for stray pets where users can book strays
+                      for a walk, or adoption.
+                    </p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
         </div>
