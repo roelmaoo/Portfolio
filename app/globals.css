@@ -6,14 +6,30 @@
 }
 
 :root {
-  --background: #ffffff;
+  --background: #f8fafc;
   --foreground: #171717;
+
+  --card: #ffffff;
+  --card-hover: #f1f5f9;
+  --border: #e2e8f0;
+
+  --muted: #64748b;
+  --button: #f1f5f9;
+  --button-hover: #e2e8f0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --card: #161616;
+    --card-hover: #1d1d1d;
+    --border: #353535;
+
+    --muted: rgba(255, 255, 255, 0.5);
+    --button: #272727;
+    --button-hover: #2c2c2c;
   }
 }
 
