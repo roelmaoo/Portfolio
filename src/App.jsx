@@ -3,7 +3,7 @@ import Grainient from './components/Grainient'
 export default function App() {
   return (
     <>
-    <div id="background" className="relative w-full h-screen">
+    <div id="background" className="relative h-500 overflow-hidden">
       <Grainient
         color1="#F4FDC2"
         color2="#81903A"
@@ -26,9 +26,9 @@ export default function App() {
         saturation={1}
         centerX={0}
         centerY={0}
-        zoom={0.9}
+        zoom={0.7}
       />
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-screen h-screen">
         <p className="absolute -top-20 -left-8 font-extrabold text-[180px] tracking-[-25px]">Roel Docto</p>
         <p className="absolute top-17 -left-2 font-bold text-[100px] ">PORTFOLIO</p>
 
