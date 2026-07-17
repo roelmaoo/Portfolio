@@ -11,4 +11,5 @@
 html {
     font-weight: bold;
     color: var(--color-black); 
+    scroll-behavior: smooth;
 }
