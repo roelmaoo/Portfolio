@@ -3,7 +3,7 @@ import Grainient from './components/Grainient'
 export default function App() {
   return (
     <>
-    <div id="background" className="relative h-screen overflow-hidden">
+    <div id="home" className="relative h-screen overflow-hidden">
       <Grainient
         color1="#F4FDC2"
         color2="#81903A"
@@ -32,8 +32,8 @@ export default function App() {
         <p className="absolute -top-20 -left-8 font-extrabold text-[180px] tracking-[-25px]">Roel Docto</p>
         <p className="absolute top-17 -left-2 font-bold text-[100px] ">PORTFOLIO</p>
 
-        <div className='absolute flex flex-col text-2xl bottom-0 p-25 gap-20 font-semibold'>
-          <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href=''>home</a>
+        <div className='absolute flex flex-col text-xl bottom-0 p-25 gap-20 font-semibold'>
+          <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href='#home'>home</a>
           <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href='#about'>about me</a>
           <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href=''>projects</a>
           <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href=''>contact</a>
@@ -50,9 +50,53 @@ export default function App() {
       
     </div>
 
-    <section id='about' className=' inset-0 z-50 h-screen w-full'>
-        hello
-      </section>
+    <section id='about' className=' inset-0 z-50 h-screen w-full p-25'>
+      <p>about me</p>
+
+      <div className='flex justify-between gap-100'>
+        <div className='w-1/2'>
+          <h1 className='text-6xl font-extrabold'>Roel Docto Jr</h1>
+          <h2 className='text-4xl'>Designer & Developer</h2>
+          <br></br>
+          <p className='text-xl'>Computer Science Graduate with a strong foundation in Human-Computer Interaction</p>
+        </div>
+        <div className='w-1/2'>
+          <h1 className='text-2xl'>Tools</h1>
+          <div className='grid grid-cols-2 gap-10'>
+            <p>Figma</p>
+            <p>Framer</p>
+            <p>Canva</p>
+            <p>WordPress</p>
+            <p>JavaScript</p>
+            <p>ReactJS</p>
+            <p>TailwindCSS</p>
+          </div>
+        </div>
+      </div>
+
+      <div className='flex justify-between gap-100'>
+        <div className='w-1/2'>
+          <h1 className='text-2xl'>Education</h1>
+          <header className='text-4xl'>University of San Agustin</header>
+          <div className='flex justify-between'>
+            <h2>BS in Computer Science</h2>
+            <h2>2022 - 2026</h2>
+          </div>
+        </div>
+
+        <div className='w-1/2'>
+          <h1 className='text-2xl'>Experience</h1>
+          <header className='text-4xl'>Frontend Developer Intern</header>
+          <div className='flex justify-between'>
+            <h2>Waffle Time Group of Companies</h2>
+            <h2>Feb 2026 - Apr 2026</h2>
+          </div>
+          <p>Led the user-centric frontend development of a responsive loyalty web application, 
+            translating complex user goals into intuitive, 
+            WCAG-compliant UI components using TailwindCSS and SvelteKit.</p>
+        </div>
+      </div>
+    </section>
 
     </>
   )
