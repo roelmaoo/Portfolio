@@ -56,50 +56,50 @@ export default function App() {
       
     </div>
 
-    <section id='about' className='flex flex-col justify-between inset-0 z-50 h-screen w-full p-10 md:p-25'>
-      <div>
+    <section id='about' className='flex flex-col justify-between inset-0 z-50 h-screen w-full p-5 md:p-10 lg:p-25'>
+      <div className=''>
         <p>about me</p>
-        <div className='grid gap-20 md:gap-0'>
+          <div className='grid gap-20 md:gap-0'>
             <div className='grid md:grid-cols-2 md:gap-50'>
-                <div className=''>
-                <h1 className='text-3xl md:text-6xl font-extrabold'>Roel Docto Jr</h1>
-                <h2 className='text-4xl'>Designer & Developer</h2>
+              <div className=''>
+                <h1 className='text-2xl md:text-3xl lg:text-6xl font-extrabold'>Roel Docto Jr</h1>
+                <h2 className='text-xl lg:text-4xl'>Designer & Developer</h2>
                 <br></br>
-                <p className='text-xl'>Computer Science Graduate with a strong foundation in Human-Computer Interaction</p>
-                <hr className='my-20'/>
+                <p className='text-sm lg:text-xl'>Computer Science Graduate with a strong foundation in Human-Computer Interaction</p>
+                <hr className='my-10 md:my-20'/>
               </div>
               <div className=''>
-                <h1 className='text-2xl'>Tools</h1>
+                <h1 className='lg:text-2xl'>Tools</h1>
                 <div className='grid grid-cols-2 gap-5'>
-                  <p className='flex items-center gap-5'><IoLogoFigma className='text-5xl'/>Figma</p>
+                  <p className='flex items-center gap-5'><IoLogoFigma className='text-4xl'/>Figma</p>
                   <p className='flex items-center gap-5'><CgFramer className='text-5xl'/>Framer</p>
-                  <p className='flex items-center gap-5'><FaQuestionCircle className='text-5xl'/>Canva</p>
-                  <p className='flex items-center gap-5'><FaWordpress className='text-5xl'/>WordPress</p>
-                  <p className='flex items-center gap-5'><IoLogoJavascript className='text-5xl'/>JavaScript</p>
-                  <p className='flex items-center gap-5'><FaReact className='text-5xl'/>ReactJS</p>
-                  <p className='flex items-center gap-5'><RiTailwindCssFill className='text-5xl'/>TailwindCSS</p>
+                  <p className='flex items-center gap-5'><FaQuestionCircle className='text-4xl'/>Canva</p>
+                  <p className='flex items-center gap-5'><FaWordpress className='text-4xl'/>WordPress</p>
+                  <p className='flex items-center gap-5'><IoLogoJavascript className='text-4xl'/>JavaScript</p>
+                  <p className='flex items-center gap-5'><FaReact className='text-4xl'/>ReactJS</p>
+                  <p className='flex items-center gap-5'><RiTailwindCssFill className='text-4xl'/>TailwindCSS</p>
                 </div>
               </div>
             </div>
 
             <div className='grid md:grid-cols-2 md:gap-50 gap-20'>
               <div className=''>
-                <h1 className='text-2xl'>Education</h1>
-                <header className='text-4xl'>University of San Agustin</header>
-                <div className='flex justify-between'>
-                  <h2>BS in Computer Science</h2>
+                <h1 className='lg:text-2xl'>Education</h1>
+                <header className='text-3xl lg:text-4xl'>University of San Agustin</header>
+                <div className='flex justify-between items-center'>
+                  <h2 className='text-sm lg:text-lg'>BS in Computer Science</h2>
                   <h2>2022 - 2026</h2>
                 </div>
               </div>
 
               <div className=''>
-                <h1 className='text-2xl'>Experience</h1>
-                <header className='text-4xl'>Frontend Developer Intern</header>
-                <div className='flex justify-between mb-10'>
+                <h1 className='lg:text-2xl'>Experience</h1>
+                <header className='text-3xl lg:text-4xl'>Frontend Developer Intern</header>
+                <div className='flex justify-between mb-10 text-sm lg:text-lg'>
                   <h2>Waffle Time Group of Companies</h2>
                   <h2>Feb 2026 - Apr 2026</h2>
                 </div>
-                <p>Led the user-centric frontend development of a responsive loyalty web application, 
+                <p className='text-md'>Led the user-centric frontend development of a responsive loyalty web application, 
                   translating complex user goals into intuitive, 
                   WCAG-compliant UI components using TailwindCSS and SvelteKit.</p>
               </div>
@@ -107,9 +107,9 @@ export default function App() {
         </div>
       </div>
 
-      <div className='flex justify-between gap-20 text-2xl'>
-        <p className='flex-0'>Skills</p>
-        <div className='flex-1 grid grid-cols-4'>
+      <div className='flex flex-col md:flex-row justify-between md:gap-10 lg:20 mt-20'>
+        <h1 className='md:text-2xl flex-0'>Skills</h1>
+        <div className='flex-1 grid grid-cols-2 md:grid-cols-4'>
           <p>User Research</p>
           <p>Wireframing</p>
           <p>Prototyping</p>
