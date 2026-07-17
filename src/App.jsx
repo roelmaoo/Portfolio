@@ -109,7 +109,7 @@ export default function App() {
 
       <div className='flex flex-col md:flex-row justify-between md:gap-10 lg:20 mt-20'>
         <h1 className='md:text-2xl flex-0'>Skills</h1>
-        <div className='flex-1 grid grid-cols-2 md:grid-cols-4'>
+        <div className='flex-1 grid grid-cols-2 md:grid-cols-4 text-lg md:text-base'>
           <p>User Research</p>
           <p>Wireframing</p>
           <p>Prototyping</p>
