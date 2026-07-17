@@ -9,6 +9,11 @@
 
 
 html {
-    font-weight: bold;
     color: var(--color-black); 
+    scroll-behavior: smooth;
+    font-weight: 600;
+}
+
+h1 {
+    font-weight: bold;
 }
