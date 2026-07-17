@@ -50,50 +50,67 @@ export default function App() {
       
     </div>
 
-    <section id='about' className=' inset-0 z-50 h-screen w-full p-25'>
-      <p>about me</p>
+    <section id='about' className='flex flex-col justify-between inset-0 z-50 h-screen w-full p-25'>
+      <div>
+        <p>about me</p>
 
-      <div className='flex justify-between gap-100'>
-        <div className='w-1/2'>
-          <h1 className='text-6xl font-extrabold'>Roel Docto Jr</h1>
-          <h2 className='text-4xl'>Designer & Developer</h2>
-          <br></br>
-          <p className='text-xl'>Computer Science Graduate with a strong foundation in Human-Computer Interaction</p>
+        <div className='flex justify-between gap-100'>
+          <div className='w-1/2'>
+            <h1 className='text-6xl font-extrabold'>Roel Docto Jr</h1>
+            <h2 className='text-4xl'>Designer & Developer</h2>
+            <br></br>
+            <p className='text-xl'>Computer Science Graduate with a strong foundation in Human-Computer Interaction</p>
+            <hr className='my-20'/>
+          </div>
+          <div className='w-1/2'>
+            <h1 className='text-2xl'>Tools</h1>
+            <div className='grid grid-cols-2 gap-10'>
+              <p>Figma</p>
+              <p>Framer</p>
+              <p>Canva</p>
+              <p>WordPress</p>
+              <p>JavaScript</p>
+              <p>ReactJS</p>
+              <p>TailwindCSS</p>
+            </div>
+          </div>
         </div>
-        <div className='w-1/2'>
-          <h1 className='text-2xl'>Tools</h1>
-          <div className='grid grid-cols-2 gap-10'>
-            <p>Figma</p>
-            <p>Framer</p>
-            <p>Canva</p>
-            <p>WordPress</p>
-            <p>JavaScript</p>
-            <p>ReactJS</p>
-            <p>TailwindCSS</p>
+
+        <div className='flex justify-between gap-100'>
+          <div className='w-1/2'>
+            <h1 className='text-2xl'>Education</h1>
+            <header className='text-4xl'>University of San Agustin</header>
+            <div className='flex justify-between'>
+              <h2>BS in Computer Science</h2>
+              <h2>2022 - 2026</h2>
+            </div>
+          </div>
+
+          <div className='w-1/2'>
+            <h1 className='text-2xl'>Experience</h1>
+            <header className='text-4xl'>Frontend Developer Intern</header>
+            <div className='flex justify-between mb-10'>
+              <h2>Waffle Time Group of Companies</h2>
+              <h2>Feb 2026 - Apr 2026</h2>
+            </div>
+            <p>Led the user-centric frontend development of a responsive loyalty web application, 
+              translating complex user goals into intuitive, 
+              WCAG-compliant UI components using TailwindCSS and SvelteKit.</p>
           </div>
         </div>
       </div>
 
-      <div className='flex justify-between gap-100'>
-        <div className='w-1/2'>
-          <h1 className='text-2xl'>Education</h1>
-          <header className='text-4xl'>University of San Agustin</header>
-          <div className='flex justify-between'>
-            <h2>BS in Computer Science</h2>
-            <h2>2022 - 2026</h2>
-          </div>
-        </div>
-
-        <div className='w-1/2'>
-          <h1 className='text-2xl'>Experience</h1>
-          <header className='text-4xl'>Frontend Developer Intern</header>
-          <div className='flex justify-between'>
-            <h2>Waffle Time Group of Companies</h2>
-            <h2>Feb 2026 - Apr 2026</h2>
-          </div>
-          <p>Led the user-centric frontend development of a responsive loyalty web application, 
-            translating complex user goals into intuitive, 
-            WCAG-compliant UI components using TailwindCSS and SvelteKit.</p>
+      <div className='flex justify-between gap-20 text-2xl'>
+        <p className='flex-0'>Skills</p>
+        <div className='flex-1 grid grid-cols-4'>
+          <p>User Research</p>
+          <p>Wireframing</p>
+          <p>Prototyping</p>
+          <p>Usability Testing</p>
+          <p>Accessibility</p>
+          <p>WCAG Compliance</p>
+          <p>User Flow</p>
+          <p>Design System</p>
         </div>
       </div>
     </section>
