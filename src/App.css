@@ -12,6 +12,9 @@ html {
     color: var(--color-black); 
     scroll-behavior: smooth;
     font-weight: 600;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 h1 {
