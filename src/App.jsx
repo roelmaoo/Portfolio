@@ -35,17 +35,17 @@ export default function App() {
         zoom={0.7}
       />
       <section className="absolute inset-0 w-screen h-screen">
-        <p className="absolute -top-20 -left-8 font-extrabold text-[180px] tracking-[-25px]">Roel Docto</p>
-        <p className="absolute top-17 -left-2 font-bold text-[100px] ">PORTFOLIO</p>
+        <p className="absolute text-5xl -top-2.5 md:-top-6 lg:-top-10 -left-3 md:-left-8 font-extrabold md:text-8xl lg:text-[180px] tracking-[-10px] md:tracking-[-25px]">CREATIVE</p>
+        <p className="absolute top-5 md:top-11 lg:top-20 -left-2 font-bold text-4xl md:text-6xl lg:text-[100px] ">PORTFOLIO</p>
 
-        <div className='absolute flex flex-col text-xl bottom-0 p-25 gap-20 font-semibold'>
+        <div className='absolute md:flex flex-col text-xl bottom-0 p-5 md:p-10 lg:p-25 gap-20 font-semibold hidden '>
           <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href='#home'>home</a>
           <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href='#about'>about me</a>
           <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href=''>projects</a>
           <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href=''>contact</a>
         </div>
 
-        <div className="absolute text-2xl font-semibold bottom-0 right-0 p-25 text-white text-right">
+        <div className="absolute inset-0 flex flex-col justify-center items-center md:w-1/2 mx-auto text-2xl font-semibold md:bottom-0 md:right-0 p-5 md:p-10 lg:p-25 text-white text-center md:text-right">
           <p className="text-7xl">“</p>
           <p className>Design is not just what it looks like and feels like.<br></br> Design is <span className="font-extrabold">how it works.</span></p>
           <p className>- Steve Jobs </p>
