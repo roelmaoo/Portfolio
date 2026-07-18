@@ -3,14 +3,14 @@ import Grainient from './components/Grainient'
 import { useState } from 'react';
 
 //Icons
-import { IoLogoFigma, IoLogoJavascript } from "react-icons/io5";
+import { IoLogoFigma, IoLogoJavascript, IoCloseOutline } from "react-icons/io5";
 import { CgFramer } from "react-icons/cg";
 import { FaQuestionCircle, FaReact, FaWordpress } from 'react-icons/fa';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function App() {
-  const [isOpen, toggleIsOpen] = useState(true)
+  const [isOpen, toggleIsOpen] = useState(false)
 
   return (
     <>
@@ -60,13 +60,27 @@ export default function App() {
         <button onClick={() => toggleIsOpen(!isOpen)} className='fixed md:hidden bottom-5 right-5 bg-black p-4 rounded-full'><GiHamburgerMenu className='text-white text-2xl'/></button>
 
         {isOpen ? (
-          <div className='flex flex-col fixed gap-10 bottom-20 right-5 text-right'>
-            <a href="#home">home</a>
-            <a href="#about">about me</a>
-            <a href="#projects">projects</a>
-            <a href="#contact">contact</a>
+          <>
+          <div className='fixed md:hidden bg-black/80 backdrop-blur-sm w-screen h-full'></div>
+          <div className='fixed md:hidden flex flex-col gap-10 bottom-5 right-5 text-white'>
+            
+            <button className='text-right' onClick={() => toggleIsOpen(!isOpen)}>
+              <a href="#home">home</a>
+            </button>
+            <button className='text-right' onClick={() => toggleIsOpen(!isOpen)}>
+              <a href="#about">about me</a>
+            </button>
+            <button className='text-right' onClick={() => toggleIsOpen(!isOpen)}>
+              <a href="#project">projects</a>
+            </button>
+            <button className='text-right' onClick={() => toggleIsOpen(!isOpen)}>
+              <a href="#contact">contact</a>
+            </button>
+            <button onClick={() => toggleIsOpen(!isOpen)} 
+            className='md:hidden bg-white p-4 rounded-full'><IoCloseOutline className='text-black text-2xl' /></button>
           </div>
-          ) : (
+
+          </>) : (
           <div>
 
           </div>
