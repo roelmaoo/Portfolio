@@ -1,12 +1,17 @@
 import Grainient from './components/Grainient'
 
+import { useState } from 'react';
+
 //Icons
 import { IoLogoFigma, IoLogoJavascript } from "react-icons/io5";
 import { CgFramer } from "react-icons/cg";
 import { FaQuestionCircle, FaReact, FaWordpress } from 'react-icons/fa';
 import { RiTailwindCssFill } from 'react-icons/ri';
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function App() {
+  const [isOpen, toggleIsOpen] = useState(true)
+
   return (
     <>
     <div id="home" className="relative h-screen overflow-hidden">
@@ -34,6 +39,8 @@ export default function App() {
         centerY={0}
         zoom={0.7}
       />
+
+      
       <section className="absolute inset-0 w-screen h-screen">
         <p className="absolute text-5xl -top-2.5 md:-top-6 lg:-top-10 -left-3 md:-left-8 font-extrabold md:text-8xl lg:text-[180px] tracking-[-10px] md:tracking-[-25px]">CREATIVE</p>
         <p className="absolute top-5 md:top-11 lg:top-20 -left-2 font-bold text-4xl md:text-6xl lg:text-[100px] ">PORTFOLIO</p>
@@ -45,11 +52,25 @@ export default function App() {
           <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href=''>contact</a>
         </div>
 
-        <div className="absolute inset-0 flex flex-col justify-center items-center md:w-1/2 mx-auto text-2xl font-semibold md:bottom-0 md:right-0 p-5 md:p-10 lg:p-25 text-white text-center md:text-right">
-          <p className="text-7xl">“</p>
-          <p className>Design is not just what it looks like and feels like.<br></br> Design is <span className="font-extrabold">how it works.</span></p>
+        <div className="absolute inset-0 md:inset-auto flex flex-col justify-center  md:w-1/2 mx-auto text-2xl font-semibold md:bottom-0 md:right-0 p-5 md:p-10 lg:p-25 text-white text-center md:text-right text-shadow-lg">
+          <p className="text-7xl ">“</p>
+          <p className>Design is not just what it looks like and feels like. Design is how it works.</p>
           <p className>- Steve Jobs </p>
         </div>
+        <button onClick={() => toggleIsOpen(!isOpen)} className='fixed md:hidden bottom-5 right-5 bg-black p-4 rounded-full'><GiHamburgerMenu className='text-white text-2xl'/></button>
+
+        {isOpen ? (
+          <div className='flex flex-col fixed gap-10 bottom-20 right-5 text-right'>
+            <a href="#home">home</a>
+            <a href="#about">about me</a>
+            <a href="#projects">projects</a>
+            <a href="#contact">contact</a>
+          </div>
+          ) : (
+          <div>
+
+          </div>
+        )}
       </section>
 
       
