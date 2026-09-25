@@ -185,7 +185,7 @@ export default function App() {
             
             {/* 1. Experience Card */}
             <div className='bg-gray-50 backdrop-blur-md hover:shadow-lg/5 rounded-3xl p-6 md:p-8 transition-all ease-in-out duration-300'>
-              <h3 className='text-xs md:text-sm font-semibold uppercase tracking-wider opacity-60 mb-2'>Experience</h3>
+              <h3 className='text-xs md:text-sm font-semibold opacity-60 mb-2'>Experience</h3>
               <header className='text-xl md:text-2xl font-bold'>Software Developer Intern</header>
               <div className='flex justify-between items-center mb-4 text-xs md:text-sm opacity-60'>
                 <span>Waffle Time Group of Companies</span>
@@ -199,7 +199,7 @@ export default function App() {
 
             {/* 2. Education Card */}
             <div className='bg-gray-50 backdrop-blur-md hover:shadow-lg/5 rounded-3xl p-6 md:p-8 transition-all ease-in-out duration-300'>
-              <h3 className='text-xs md:text-sm font-semibold uppercase tracking-wider opacity-60 mb-2'>Education</h3>
+              <h3 className='text-xs md:text-sm font-semibold opacity-60 mb-2'>Education</h3>
               <header className='text-xl md:text-2xl font-bold'>University of San Agustin</header>
               <div className='flex justify-between items-center mb-4 text-xs md:text-sm opacity-60'>
                 <span>BS in Computer Science</span>
@@ -330,6 +330,15 @@ export default function App() {
           <div className="flex-1 max-w-2xl">
             <p className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4">Let's work together!</p>
             <p className="text-sm md:text-base lg:text-lg text-black/70 mb-6">Feel free to reach out for collaborations, inquiries, or just a friendly chat. I'm always open to new opportunities and connections.</p>
+            <div className="flex items-center gap-2">
+              <a href="https://www.linkedin.com/in/roeldoctojr/" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>
+              </a>
+
+              <a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="64" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10c-1.89 0-3.66-.525-5.168-1.437l-3.032.891A1.01 1.01 0 0 1 2.546 20.2l.892-3.032A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2M9.785 7.259a.7.7 0 0 0-.683-.075A2.79 2.79 0 0 0 7.494 9.07l-.007.03c-.038.152-.07.331-.063.526c.025.682.292 2.613 2.314 4.636c2.023 2.022 3.954 2.29 4.636 2.314a2 2 0 0 0 .526-.062l.035-.01a2.78 2.78 0 0 0 1.88-1.6a.7.7 0 0 0-.09-.703c-.533-.683-1.248-1.176-1.884-1.615l-.127-.088a.71.71 0 0 0-.974.157l-.6.915a.23.23 0 0 1-.305.076c-.407-.232-1-.629-1.426-1.055s-.798-.992-1.007-1.372a.23.23 0 0 1 .068-.291l.923-.686a.713.713 0 0 0 .12-.94l-.134-.198c-.42-.62-.912-1.348-1.594-1.845"/></svg>
+              </a>
+            </div>
             <a href="mailto:roeldocto8@gmail.com" className="inline-block bg-black text-white px-6 py-3 rounded-full text-sm md:text-base font-medium hover:bg-gray-800 transition-colors">
               Get in Touch
             </a>
