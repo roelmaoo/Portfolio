@@ -15,21 +15,18 @@ export default function App() {
   const [isOpen, toggleIsOpen] = useState(false);
   const [isPastHero, setIsPastHero] = useState(false);
 
-  useEffect(() => {
-    // Watches the "About Me" section to flip mobile nav pill text colors when scrolled past hero
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsPastHero(entry.isIntersecting);
-      },
-      { threshold: 0.1 }
-    );
-
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) observer.observe(aboutSection);
-
-    return () => {
-      if (aboutSection) observer.unobserve(aboutSection);
+useEffect(() => {
+    const handleScroll = () => {
+      // Switches to dark text as soon as you scroll past 100 pixels, and stays dark
+      if (window.scrollY > 100) {
+        setIsPastHero(true);
+      } else {
+        setIsPastHero(false);
+      }
     };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const projectsList = [
@@ -117,26 +114,26 @@ export default function App() {
     <nav className="fixed z-50">
       
       {/* DESKTOP VIEW: Horizontal Frosted Glass Bar at Top */}
-      <div className='hidden md:flex fixed top-5 left-1/2 -translate-x-1/2 items-center justify-center gap-1 px-2 py-1 bg-[#FFFFFF]/20 backdrop-blur-md border border-gray-50 rounded-full shadow-lg font-semibold text-base text-black'>
-        <a className='px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#home'>Home</a>
-        <a className='px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#about'>About</a>
-        <a className='px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#project'>Projects</a>
-        <a className='px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#contact'>Contact</a>
+      <div className='hidden md:flex fixed top-5 left-1/2 -translate-x-1/2 items-center justify-center gap-1 px-1 py-1 bg-[#FFFFFF]/20 backdrop-blur-md border border-gray-100/30 rounded-full shadow-lg font-semibold text-base text-black'>
+        <a className={`px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30 ${isPastHero ? 'text-black hover:bg-gray-300/30' : 'text-white hover:bg-gray-950/10'}`} href='#home'>Home</a>
+        <a className={`px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30 ${isPastHero ? 'text-black' : 'text-white hover:bg-gray-950/10'}`} href='#about'>About</a>
+        <a className={`px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30 ${isPastHero ? 'text-black' : 'text-white hover:bg-gray-950/10'}`} href='#project'>Projects</a>
+        <a className={`px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30 ${isPastHero ? 'text-black' : 'text-white hover:bg-gray-950/10'}`} href='#contact'>Contact</a>
       </div>
 
       {/* MOBILE VIEW: Floating Hamburger & Frosted Glass Pill Items at Bottom Right */}
       <div className='md:hidden fixed bottom-6 right-6 flex flex-col items-end gap-2 pointer-events-auto'>
         {isOpen && (
           <div className='flex flex-col items-end gap-2 font-semibold text-sm'>
-            <a onClick={() => toggleIsOpen(false)} className={`px-5 py-2.5 rounded-full shadow-lg backdrop-blur-md bg-white/20   transition-colors ${isPastHero ? 'text-black' : 'text-white'}`} href='#home'>Home</a>
-            <a onClick={() => toggleIsOpen(false)} className={`px-5 py-2.5 rounded-full shadow-lg backdrop-blur-md bg-white/20  transition-colors ${isPastHero ? 'text-black' : 'text-white'}`} href='#about'>About</a>
-            <a onClick={() => toggleIsOpen(false)} className={`px-5 py-2.5 rounded-full shadow-lg backdrop-blur-md bg-white/20  transition-colors ${isPastHero ? 'text-black' : 'text-white'}`} href='#project'>Projects</a>
-            <a onClick={() => toggleIsOpen(false)} className={`px-5 py-2.5 rounded-full shadow-lg backdrop-blur-md bg-white/20   transition-colors ${isPastHero ? 'text-black' : 'text-white'}`} href='#contact'>Contact</a>
+            <a onClick={() => toggleIsOpen(false)} className={`px-5 py-2.5 rounded-full shadow-lg backdrop-blur-md bg-white/20 transition-colors ${isPastHero ? 'text-black' : 'text-white'}`} href='#home'>Home</a>
+            <a onClick={() => toggleIsOpen(false)} className={`px-5 py-2.5 rounded-full shadow-lg backdrop-blur-md bg-white/20 transition-colors ${isPastHero ? 'text-black' : 'text-white'}`} href='#about'>About</a>
+            <a onClick={() => toggleIsOpen(false)} className={`px-5 py-2.5 rounded-full shadow-lg backdrop-blur-md bg-white/20 transition-colors ${isPastHero ? 'text-black' : 'text-white'}`} href='#project'>Projects</a>
+            <a onClick={() => toggleIsOpen(false)} className={`px-5 py-2.5 rounded-full shadow-lg backdrop-blur-md bg-white/20 transition-colors ${isPastHero ? 'text-black' : 'text-white'}`} href='#contact'>Contact</a>
           </div>
         )}
         <button 
           onClick={() => toggleIsOpen(!isOpen)} 
-          className='p-4 rounded-full shadow-2xl backdrop-blur-md bg-black  hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center text-black'
+          className='p-4 rounded-full shadow-2xl backdrop-blur-md bg-[#3C4D23] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center text-white border-0 outline-none ring-0'
           aria-label="Toggle Navigation"
         >
           {isOpen ? <IoCloseOutline className='text-2xl text-white' /> : <GiHamburgerMenu className='text-2xl text-white' />}
@@ -264,7 +261,7 @@ export default function App() {
             <div className="flex-1">
               <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-4">Let's work together!</p>
               <p className="text-sm md:text-base lg:text-lg text-black/70 mb-6">Feel free to reach out for collaborations, inquiries, or just a friendly chat. I'm always open to new opportunities and connections.</p>
-              <a href="mailto:example@email.com" className="inline-block bg-black text-white px-5 py-2.5 rounded-full hover:bg-gray-800 transition-colors">
+              <a href="mailto:roeldocto8@gmail.com" className="inline-block bg-black text-white px-5 py-2.5 rounded-full hover:bg-gray-800 transition-colors">
                 Get in Touch
               </a>
             </div>
