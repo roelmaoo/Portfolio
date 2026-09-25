@@ -13,54 +13,57 @@ import { HiArrowUpRight } from "react-icons/hi2";
 
 export default function App() {
   const [isOpen, toggleIsOpen] = useState(false);
-  const [showFloatingNav, setShowFloatingNav] = useState(false);
+  const [isPastHero, setIsPastHero] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      // Show floating nav once scrolled past 80% of the first viewport height
-      if (window.scrollY > window.innerHeight * 0.8) {
-        setShowFloatingNav(true);
-      } else {
-        setShowFloatingNav(false);
-      }
-    };
+    // Watches the "About Me" section to flip mobile nav pill text colors when scrolled past hero
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsPastHero(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) observer.observe(aboutSection);
+
+    return () => {
+      if (aboutSection) observer.unobserve(aboutSection);
+    };
   }, []);
 
   const projectsList = [
     {
       id: "01",
-      title: "HALCYON BANK",
+      title: "HALCYON",
       subtitle: "Consumer fintech app + web console",
       tags: "PRODUCT DESIGN — DESIGN SYSTEM — FRONTEND",
       year: "2026"
     },
     {
       id: "02",
-      title: "TERRA ATLAS",
+      title: "TERRA",
       subtitle: "Climate data visualisation platform",
       tags: "UX RESEARCH — DATA VIZ — FRONTEND",
       year: "2025"
     },
     {
       id: "03",
-      title: "STUDIO KILO",
+      title: "KILO",
       subtitle: "Editorial site for an architecture practice",
       tags: "ART DIRECTION — FRONTEND",
       year: "2025"
     },
     {
       id: "04",
-      title: "PULSE HEALTH",
+      title: "PULSE",
       subtitle: "Clinical scheduling for 60+ clinics",
       tags: "UX LEAD — PROTOTYPING",
       year: "2024"
     },
     {
       id: "05",
-      title: "ORBIT OS",
+      title: "ORBIT",
       subtitle: "Open-source component library",
       tags: "DESIGN ENGINEERING",
       year: "2024"
@@ -110,14 +113,36 @@ export default function App() {
       
     </div>
     
-    {/* Floating Frosted Glass Navbar (Appears on Scroll) */}
-    <nav className={`fixed bottom-10 sm:top-5 left-1/2 -translate-x-1/2 z-50  transition-all duration-500 ease-in-out ${showFloatingNav ? 'opacity-100 -translate-y-10 md:translate-y-10' : 'opacity-0 pointer-events-none'}`}>
-      <div className='flex items-center justify-center gap-3 p-2 md:gap-6 w-full bg-[#FFFFFF]/10 backdrop-blur-md border border-black/5 rounded-full shadow-lg font-semibold text-lg md:text-base'>
-        <a className='px-5 py-1.5 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#home'>Home</a>
-        <a className='px-5 py-1.5 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#about'>About</a>
-        <a className='px-5 py-1.5 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#project'>Projects</a>
-        <a className='px-5 py-1.5 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#contact'>Contact</a>
+    {/* Permanent Floating Navbar */}
+    <nav className="fixed z-50">
+      
+      {/* DESKTOP VIEW: Horizontal Frosted Glass Bar at Top */}
+      <div className='hidden md:flex fixed top-5 left-1/2 -translate-x-1/2 items-center justify-center gap-1 px-2 py-1 bg-[#FFFFFF]/20 backdrop-blur-md border border-gray-50 rounded-full shadow-lg font-semibold text-base text-black'>
+        <a className='px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#home'>Home</a>
+        <a className='px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#about'>About</a>
+        <a className='px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#project'>Projects</a>
+        <a className='px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#contact'>Contact</a>
       </div>
+
+      {/* MOBILE VIEW: Floating Hamburger & Frosted Glass Pill Items at Bottom Right */}
+      <div className='md:hidden fixed bottom-6 right-6 flex flex-col items-end gap-2 pointer-events-auto'>
+        {isOpen && (
+          <div className='flex flex-col items-end gap-2 font-semibold text-sm'>
+            <a onClick={() => toggleIsOpen(false)} className={`px-5 py-2.5 rounded-full shadow-lg backdrop-blur-md bg-white/20   transition-colors ${isPastHero ? 'text-black' : 'text-white'}`} href='#home'>Home</a>
+            <a onClick={() => toggleIsOpen(false)} className={`px-5 py-2.5 rounded-full shadow-lg backdrop-blur-md bg-white/20  transition-colors ${isPastHero ? 'text-black' : 'text-white'}`} href='#about'>About</a>
+            <a onClick={() => toggleIsOpen(false)} className={`px-5 py-2.5 rounded-full shadow-lg backdrop-blur-md bg-white/20  transition-colors ${isPastHero ? 'text-black' : 'text-white'}`} href='#project'>Projects</a>
+            <a onClick={() => toggleIsOpen(false)} className={`px-5 py-2.5 rounded-full shadow-lg backdrop-blur-md bg-white/20   transition-colors ${isPastHero ? 'text-black' : 'text-white'}`} href='#contact'>Contact</a>
+          </div>
+        )}
+        <button 
+          onClick={() => toggleIsOpen(!isOpen)} 
+          className='p-4 rounded-full shadow-2xl backdrop-blur-md bg-black  hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center text-black'
+          aria-label="Toggle Navigation"
+        >
+          {isOpen ? <IoCloseOutline className='text-2xl text-white' /> : <GiHamburgerMenu className='text-2xl text-white' />}
+        </button>
+      </div>
+
     </nav>
 
     {/* About Me */}
@@ -188,7 +213,7 @@ export default function App() {
     </section>
 
     {/* Projects Section */}
-    <section id='project' className="z-30 w-full p-5 md:p-10 lg:p-25">
+    <section id='project' className="z-30 w-screen p-5 md:p-10 lg:p-25">
       <div className="mb-10">
         <h2 className="text-xl md:text-2xl font-semibold tracking-wide">projects</h2>
       </div>
@@ -203,7 +228,7 @@ export default function App() {
             <div className="flex items-start md:items-center gap-4 md:gap-16">
               <span className="text-xs md:text-sm font-mono text-black/60 pt-2 md:pt-0">{project.id}</span>
               <div>
-                <h3 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight group-hover:translate-x-2 transition-transform duration-300 break-words">
+                <h3 className="text-2xl sm:text-5xl md:text-5xl lg:text-7xl font-extrabold tracking-tight group-hover:translate-x-2 transition-transform duration-300 break-words">
                   {project.title}
                 </h3>
                 <p className="text-xs sm:text-sm md:text-base text-black/70 mt-1">{project.subtitle}</p>
