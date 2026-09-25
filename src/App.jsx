@@ -120,10 +120,10 @@ useEffect(() => {
       
       {/* DESKTOP VIEW: Horizontal Frosted Glass Bar at Top */}
       <div className='hidden md:flex fixed top-5 left-1/2 -translate-x-1/2 items-center justify-center gap-1 px-1 py-1 bg-[#FFFFFF]/20 backdrop-blur-md border border-gray-100/30 rounded-full shadow-lg font-semibold text-base text-black'>
-        <a className={`px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30 ${isPastHero ? 'text-black hover:bg-gray-300/30' : 'text-white hover:bg-gray-950/10'}`} href='#home'>Home</a>
-        <a className={`px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30 ${isPastHero ? 'text-black' : 'text-white hover:bg-gray-950/10'}`} href='#about'>About</a>
-        <a className={`px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30 ${isPastHero ? 'text-black' : 'text-white hover:bg-gray-950/10'}`} href='#project'>Projects</a>
-        <a className={`px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30 ${isPastHero ? 'text-black' : 'text-white hover:bg-gray-950/10'}`} href='#contact'>Contact</a>
+        <a className={`px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30 ${isPastHero ? 'text-black' : 'text-white hover:bg-gray-950/20 active:bg-gray-950/30'}`} href='#home'>Home</a>
+        <a className={`px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30 ${isPastHero ? 'text-black ' : 'text-white hover:bg-gray-950/20 active:bg-gray-950/30'}`} href='#about'>About</a>
+        <a className={`px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30 ${isPastHero ? 'text-black' : 'text-white hover:bg-gray-950/20 active:bg-gray-950/30'}`} href='#project'>Projects</a>
+        <a className={`px-4 py-2 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30 ${isPastHero ? 'text-black' : 'text-white hover:bg-gray-950/20 active:bg-gray-950/30'}`} href='#contact'>Contact</a>
       </div>
 
       {/* MOBILE VIEW: Floating Hamburger & Frosted Glass Pill Items at Bottom Right */}
