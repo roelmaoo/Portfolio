@@ -32,38 +32,43 @@ useEffect(() => {
   const projectsList = [
     {
       id: "01",
-      title: "HALCYON",
-      subtitle: "Consumer fintech app + web console",
-      tags: "PRODUCT DESIGN — DESIGN SYSTEM — FRONTEND",
-      year: "2026"
+      title: "Morph",
+      subtitle: "AI-assisted fitness app for personalized workouts",
+      tags: "PRODUCT DESIGN — FIGMA — MOBILE APP",
+      year: "2026",
+      link: "https://www.figma.com/proto/v4xkM7vdJcViilDusOWGpd/Case-Study-and-Projects?node-id=591-363&p=f&t=CozUrEsHos5KKjON-0&scaling=min-zoom&content-scaling=fixed&page-id=591%3A363&fuid=1601835686234775557"
     },
     {
       id: "02",
-      title: "TERRA",
-      subtitle: "Climate data visualisation platform",
-      tags: "UX RESEARCH — DATA VIZ — FRONTEND",
-      year: "2025"
+      title: "Paw Haven",
+      subtitle: "A pet adoption platform connecting animals with loving homes",
+      tags: "PRODUCT DESIGN — REACTJS — FRONTEND",
+      year: "2025",
+      link: "https://pawhaven-byroel.vercel.app/"
     },
     {
       id: "03",
-      title: "KILO",
-      subtitle: "Editorial site for an architecture practice",
-      tags: "ART DIRECTION — FRONTEND",
-      year: "2025"
+      title: "USA Forum",
+      subtitle: "A community-driven platform for sharing and discussing ideas",
+      tags: "UX RESEARCH — FIGMA — MOBILE APP",
+      year: "2024",
+      link: "https://www.figma.com/proto/v4xkM7vdJcViilDusOWGpd/Case-Study-and-Projects?node-id=974-3055&p=f&t=CQ2LGZvJAlFSm8ku-0&scaling=min-zoom&content-scaling=fixed&page-id=969%3A82&starting-point-node-id=974%3A3055"
     },
     {
       id: "04",
-      title: "PULSE",
-      subtitle: "Clinical scheduling for 60+ clinics",
-      tags: "UX LEAD — PROTOTYPING",
-      year: "2024"
+      title: "TODO app",
+      subtitle: "A simple and intuitive task management application",
+      tags: "UX RESEARCH — FIGMA — WEB & MOBILE APP",
+      year: "2026",
+      link: "https://www.figma.com/proto/VrG0C6u9yQKqO7MCbN3LdW/UI-Design-Assessment-Docto?node-id=0-1&p=f&t=V08nAtd8WGX7Vlch-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=64%3A746&show-proto-sidebar=1&fuid=1601835686234775557"
     },
     {
       id: "05",
-      title: "ORBIT",
-      subtitle: "Open-source component library",
-      tags: "DESIGN ENGINEERING",
-      year: "2024"
+      title: "Jeepney Routes",
+      subtitle: "A mobile app for commuters to track jeepney routes in real-time",
+      tags: "UX RESEARCH — REACTJS — FULLSTACK",
+      year: "2025",
+      link: "https://iloilojeepneyroutes.vercel.app/"
     }
   ];
 
@@ -217,7 +222,7 @@ useEffect(() => {
 
       <div className="border-t border-black/20">
         {projectsList.map((project, index) => (
-          <div 
+          <a href={project.link} target="_blank" rel="noopener noreferrer"
             key={index}
             className="group relative flex flex-col md:flex-row md:items-center justify-between py-8 md:py-12 border-b border-black/20 cursor-pointer transition-colors duration-300 hover:bg-white/10 px-2 md:px-4 gap-4 md:gap-0"
           >
@@ -246,7 +251,7 @@ useEffect(() => {
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>
