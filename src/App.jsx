@@ -1,4 +1,5 @@
 import Grainient from './components/Grainient'
+import AudioPlayerButton from './components/ReactPlayer'
 
 import { useState } from 'react';
 
@@ -40,11 +41,11 @@ export default function App() {
         zoom={0.7}
       />
 
-      
+      {/* Home */}
       <section className="absolute inset-0 w-screen h-screen">
         <p className="absolute text-5xl -top-2.5 md:-top-6 lg:-top-10 -left-3 md:-left-8 font-extrabold md:text-8xl lg:text-[180px] tracking-[-10px] md:tracking-[-25px]">CREATIVE</p>
         <p className="absolute top-5 md:top-11 lg:top-20 -left-2 font-bold text-4xl md:text-6xl lg:text-[100px] ">PORTFOLIO</p>
-
+        
         <div className='absolute md:flex flex-col text-xl bottom-0 p-5 md:p-10 lg:p-25 gap-20 font-semibold hidden '>
           <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href='#home'>home</a>
           <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href='#about'>about me</a>
@@ -90,7 +91,8 @@ export default function App() {
       
       
     </div>
-
+    
+    {/* About Me */}
     <section id='about' className='flex flex-col justify-between inset-0 z-50 h-screen w-full p-5 md:p-10 lg:p-25'>
       <div className=''>
         <p>about me</p>
@@ -155,6 +157,31 @@ export default function App() {
           <p>Design System</p>
         </div>
       </div>
+    </section>
+
+    {/* projects */}
+    <section className="flex flex-col justify-between inset-0 z-50 h-full w-full p-5 md:p-10 lg:p-25">
+        <div className='flex flex-col gap-4'>
+          <div className='bg-gray-100 h-60 p-4'>
+            <p>etst</p>
+          </div>
+
+          <div className='bg-gray-100 h-60 p-4'>
+            <p>etst</p>
+          </div>
+
+          <div className='bg-gray-100 h-60 p-4'>
+            <p>etst</p>
+          </div>
+
+          <div className='bg-gray-100 h-60 p-4'>
+            <p>etst</p>
+          </div>
+
+          <div className='bg-gray-100 h-60 p-4'>
+            <p>etst</p>
+          </div>
+        </div>
     </section>
 
     </>
