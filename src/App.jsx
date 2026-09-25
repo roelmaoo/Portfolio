@@ -170,7 +170,7 @@ export default function App() {
           {/* LEFT SIDE: Name, Title, and Bios (Span 5 cols) */}
           <div className='lg:col-span-5 bg-gray-50 backdrop-blur-md hover:shadow-lg/5 rounded-3xl p-6 md:p-8 flex flex-col justify-between transition-all ease-in-out duration-300'>
             <div>
-              <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight'>Roel Docto Jr</h1>
+              <h1 className='text-3xl md:text-4xl lg:text-4xl font-extrabold tracking-tight'>Roel Docto Jr</h1>
               <h2 className='text-lg md:text-xl font-medium mt-2 opacity-80'>Designer & Developer</h2>
               <div className='w-full h-[1px] bg-black/10 my-6' />
               <div className='space-y-3 text-sm md:text-base text-black/80'>
