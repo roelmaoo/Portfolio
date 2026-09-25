@@ -162,25 +162,49 @@ export default function App() {
     {/* projects */}
     <section className="flex flex-col justify-between inset-0 z-50 h-full w-full p-5 md:p-10 lg:p-25">
         <div className='flex flex-col gap-4'>
-          <div className='bg-gray-100 h-60 p-4'>
-            <p>etst</p>
+          <div className='bg-[#F9FAFB] h-60 p-4 rounded-lg flex gap-4'>
+            <div>
+              <p className='text-2xl font-bold'>01</p>
+            </div>
+
+            <div className='flex gap-4'>
+              <div className='bg-black/20 h-full w-80 rounded-lg'></div>
+              <div>
+                <h1 className='text-5xl font-extrabold'>Morphe</h1>
+                <p className='text-md'>mobile app</p>
+              </div>
+            </div>
           </div>
 
-          <div className='bg-gray-100 h-60 p-4'>
-            <p>etst</p>
+          <div className='bg-[#F9FAFB] h-60 p-4 rounded-lg flex gap-4'>
+            <div>
+              <p className='text-2xl font-bold'>01</p>
+            </div>
+
+            <div className='flex gap-4'>
+              <div className='bg-black/20 h-full w-80 rounded-lg'></div>
+              <div>
+                <h1 className='text-5xl font-extrabold'>Morphe</h1>
+                <p className='text-md'>mobile app</p>
+              </div>
+            </div>
           </div>
 
-          <div className='bg-gray-100 h-60 p-4'>
-            <p>etst</p>
+          <div className='bg-[#F9FAFB] h-60 p-4 rounded-lg flex gap-4'>
+            <div>
+              <p className='text-2xl font-bold'>01</p>
+            </div>
+
+            <div className='flex gap-4'>
+              <div className='bg-black/20 h-full w-80 rounded-lg'></div>
+              <div>
+                <h1 className='text-5xl font-extrabold'>Morphe</h1>
+                <p className='text-md'>mobile app</p>
+              </div>
+            </div>
           </div>
 
-          <div className='bg-gray-100 h-60 p-4'>
-            <p>etst</p>
-          </div>
 
-          <div className='bg-gray-100 h-60 p-4'>
-            <p>etst</p>
-          </div>
         </div>
     </section>
 
