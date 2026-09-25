@@ -1,7 +1,7 @@
 import Grainient from './components/Grainient'
 import AudioPlayerButton from './components/ReactPlayer'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 //Icons
 import { IoLogoFigma, IoLogoJavascript, IoCloseOutline } from "react-icons/io5";
@@ -9,9 +9,63 @@ import { CgFramer } from "react-icons/cg";
 import { FaQuestionCircle, FaReact, FaWordpress } from 'react-icons/fa';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { GiHamburgerMenu } from "react-icons/gi";
+import { HiArrowUpRight } from "react-icons/hi2";
 
 export default function App() {
-  const [isOpen, toggleIsOpen] = useState(false)
+  const [isOpen, toggleIsOpen] = useState(false);
+  const [showFloatingNav, setShowFloatingNav] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show floating nav once scrolled past 80% of the first viewport height
+      if (window.scrollY > window.innerHeight * 0.8) {
+        setShowFloatingNav(true);
+      } else {
+        setShowFloatingNav(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const projectsList = [
+    {
+      id: "01",
+      title: "HALCYON BANK",
+      subtitle: "Consumer fintech app + web console",
+      tags: "PRODUCT DESIGN — DESIGN SYSTEM — FRONTEND",
+      year: "2026"
+    },
+    {
+      id: "02",
+      title: "TERRA ATLAS",
+      subtitle: "Climate data visualisation platform",
+      tags: "UX RESEARCH — DATA VIZ — FRONTEND",
+      year: "2025"
+    },
+    {
+      id: "03",
+      title: "STUDIO KILO",
+      subtitle: "Editorial site for an architecture practice",
+      tags: "ART DIRECTION — FRONTEND",
+      year: "2025"
+    },
+    {
+      id: "04",
+      title: "PULSE HEALTH",
+      subtitle: "Clinical scheduling for 60+ clinics",
+      tags: "UX LEAD — PROTOTYPING",
+      year: "2024"
+    },
+    {
+      id: "05",
+      title: "ORBIT OS",
+      subtitle: "Open-source component library",
+      tags: "DESIGN ENGINEERING",
+      year: "2024"
+    }
+  ];
 
   return (
     <>
@@ -45,55 +99,29 @@ export default function App() {
       <section className="absolute inset-0 w-screen h-screen">
         <p className="absolute text-5xl -top-2.5 md:-top-6 lg:-top-10 -left-3 md:-left-8 font-extrabold md:text-8xl lg:text-[180px] tracking-[-10px] md:tracking-[-25px]">CREATIVE</p>
         <p className="absolute top-5 md:top-11 lg:top-20 -left-2 font-bold text-4xl md:text-6xl lg:text-[100px] ">PORTFOLIO</p>
-        
-        <div className='absolute md:flex flex-col text-xl bottom-0 p-5 md:p-10 lg:p-25 gap-20 font-semibold hidden '>
-          <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href='#home'>home</a>
-          <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href='#about'>about me</a>
-          <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href=''>projects</a>
-          <a className='hover:translate-x-5 transition-all ease-in-out duration-300' href=''>contact</a>
-        </div>
 
         <div className="absolute inset-0 md:inset-auto flex flex-col justify-center  md:w-1/2 mx-auto text-2xl font-semibold md:bottom-0 md:right-0 p-5 md:p-10 lg:p-25 text-white text-center md:text-right text-shadow-lg">
           <p className="text-7xl ">“</p>
           <p className>Design is not just what it looks like and feels like. Design is how it works.</p>
           <p className>- Steve Jobs </p>
         </div>
-        <button onClick={() => toggleIsOpen(!isOpen)} className='fixed md:hidden bottom-5 right-5 bg-black p-4 rounded-full'><GiHamburgerMenu className='text-white text-2xl'/></button>
 
-        {isOpen ? (
-          <>
-          <div className='fixed md:hidden bg-black/80 backdrop-blur-sm w-screen h-full'></div>
-          <div className='fixed md:hidden flex flex-col gap-10 bottom-5 right-5 text-white'>
-            
-            <button className='text-right' onClick={() => toggleIsOpen(!isOpen)}>
-              <a href="#home">home</a>
-            </button>
-            <button className='text-right' onClick={() => toggleIsOpen(!isOpen)}>
-              <a href="#about">about me</a>
-            </button>
-            <button className='text-right' onClick={() => toggleIsOpen(!isOpen)}>
-              <a href="#project">projects</a>
-            </button>
-            <button className='text-right' onClick={() => toggleIsOpen(!isOpen)}>
-              <a href="#contact">contact</a>
-            </button>
-            <button onClick={() => toggleIsOpen(!isOpen)} 
-            className='md:hidden bg-white p-4 rounded-full'><IoCloseOutline className='text-black text-2xl' /></button>
-          </div>
-
-          </>) : (
-          <div>
-
-          </div>
-        )}
       </section>
-
-      
       
     </div>
     
+    {/* Floating Frosted Glass Navbar (Appears on Scroll) */}
+    <nav className={`fixed bottom-10 sm:top-5 left-1/2 -translate-x-1/2 z-50  transition-all duration-500 ease-in-out ${showFloatingNav ? 'opacity-100 -translate-y-10 md:translate-y-10' : 'opacity-0 pointer-events-none'}`}>
+      <div className='flex items-center justify-center gap-3 p-2 md:gap-6 w-full bg-[#FFFFFF]/10 backdrop-blur-md border border-black/5 rounded-full shadow-lg font-semibold text-lg md:text-base'>
+        <a className='px-5 py-1.5 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#home'>Home</a>
+        <a className='px-5 py-1.5 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#about'>About</a>
+        <a className='px-5 py-1.5 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#project'>Projects</a>
+        <a className='px-5 py-1.5 rounded-full transition-colors active:bg-gray-400/40 hover:bg-gray-300/30' href='#contact'>Contact</a>
+      </div>
+    </nav>
+
     {/* About Me */}
-    <section id='about' className='flex flex-col justify-between inset-0 z-50 h-screen w-full p-5 md:p-10 lg:p-25'>
+    <section id='about' className='flex flex-col justify-between inset-0 z-30 min-h-screen w-full p-5 md:p-10 lg:p-25'>
       <div className=''>
         <p>about me</p>
           <div className='grid gap-20 md:gap-0'>
@@ -159,55 +187,64 @@ export default function App() {
       </div>
     </section>
 
-    {/* projects */}
-    <section className="flex flex-col justify-between inset-0 z-50 h-full w-full p-5 md:p-10 lg:p-25">
-        <div className='flex flex-col gap-4'>
-          <div className='bg-[#F9FAFB] h-60 p-4 rounded-lg flex gap-4'>
-            <div>
-              <p className='text-2xl font-bold'>01</p>
+    {/* Projects Section */}
+    <section id='project' className="z-30 w-full p-5 md:p-10 lg:p-25">
+      <div className="mb-10">
+        <h2 className="text-xl md:text-2xl font-semibold tracking-wide">projects</h2>
+      </div>
+
+      <div className="border-t border-black/20">
+        {projectsList.map((project, index) => (
+          <div 
+            key={index}
+            className="group relative flex flex-col md:flex-row md:items-center justify-between py-8 md:py-12 border-b border-black/20 cursor-pointer transition-colors duration-300 hover:bg-white/10 px-2 md:px-4 gap-4 md:gap-0"
+          >
+            {/* Left Side: Number, Title, Subtitle */}
+            <div className="flex items-start md:items-center gap-4 md:gap-16">
+              <span className="text-xs md:text-sm font-mono text-black/60 pt-2 md:pt-0">{project.id}</span>
+              <div>
+                <h3 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight group-hover:translate-x-2 transition-transform duration-300 break-words">
+                  {project.title}
+                </h3>
+                <p className="text-xs sm:text-sm md:text-base text-black/70 mt-1">{project.subtitle}</p>
+              </div>
             </div>
 
-            <div className='flex gap-4'>
-              <div className='bg-black/20 h-full w-80 rounded-lg'></div>
-              <div>
-                <h1 className='text-5xl font-extrabold'>Morphe</h1>
-                <p className='text-md'>mobile app</p>
+            {/* Right Side: Tags, Year, Arrow */}
+            <div className="flex items-center justify-between md:justify-end gap-4 md:gap-16 mt-2 md:mt-0 w-full md:w-auto">
+              <span className="text-[10px] sm:text-xs md:text-sm font-mono text-black/60 tracking-wider">
+                {project.tags}
+              </span>
+              <div className="flex items-center gap-4 md:gap-16 flex-shrink-0">
+                <span className="text-xs sm:text-sm md:text-lg font-mono font-medium">
+                  {project.year}
+                </span>
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-black/30 flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all duration-300">
+                  <HiArrowUpRight className="text-sm md:text-lg" />
+                </div>
               </div>
             </div>
           </div>
-
-          <div className='bg-[#F9FAFB] h-60 p-4 rounded-lg flex gap-4'>
-            <div>
-              <p className='text-2xl font-bold'>01</p>
-            </div>
-
-            <div className='flex gap-4'>
-              <div className='bg-black/20 h-full w-80 rounded-lg'></div>
-              <div>
-                <h1 className='text-5xl font-extrabold'>Morphe</h1>
-                <p className='text-md'>mobile app</p>
-              </div>
-            </div>
-          </div>
-
-          <div className='bg-[#F9FAFB] h-60 p-4 rounded-lg flex gap-4'>
-            <div>
-              <p className='text-2xl font-bold'>01</p>
-            </div>
-
-            <div className='flex gap-4'>
-              <div className='bg-black/20 h-full w-80 rounded-lg'></div>
-              <div>
-                <h1 className='text-5xl font-extrabold'>Morphe</h1>
-                <p className='text-md'>mobile app</p>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
+        ))}
+      </div>
     </section>
 
-    </>
-  )
+    {/* Footer */}
+        <section id='contact' className="z-30 w-full p-5 md:p-10 lg:p-25">
+          <div className="mb-10">
+            <h2 className="text-xl md:text-2xl font-semibold tracking-wide">contact</h2>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-between gap-10">
+            <div className="flex-1">
+              <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-4">Let's work together!</p>
+              <p className="text-sm md:text-base lg:text-lg text-black/70 mb-6">Feel free to reach out for collaborations, inquiries, or just a friendly chat. I'm always open to new opportunities and connections.</p>
+              <a href="mailto:example@email.com" className="inline-block bg-black text-white px-5 py-2.5 rounded-full hover:bg-gray-800 transition-colors">
+                Get in Touch
+              </a>
+            </div>
+          </div>
+        </section>
+      </>
+    )
 }
