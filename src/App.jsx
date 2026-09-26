@@ -789,86 +789,7 @@ function Home() {
               </div>
 
 
-              {/* EDUCATION */}
-
-              <div
-                className="
-                  bg-gray-50
-                  backdrop-blur-md
-                  hover:shadow-lg/5
-                  rounded-3xl
-                  p-6
-                  md:p-8
-                  transition-all
-                  ease-in-out
-                  duration-300
-                "
-              >
-
-                <h3
-                  className="
-                    text-xs
-                    md:text-sm
-                    font-semibold
-                    opacity-60
-                    mb-2
-                  "
-                >
-                  Education
-                </h3>
-
-
-                <header
-                  className="
-                    text-xl
-                    md:text-2xl
-                    font-bold
-                  "
-                >
-                  University of San Agustin
-                </header>
-
-
-                <div
-                  className="
-                    flex
-                    justify-between
-                    items-center
-                    mb-4
-                    text-xs
-                    md:text-sm
-                    opacity-60
-                  "
-                >
-
-                  <span>
-                    BS in Computer Science
-                  </span>
-
-                  <span>
-                    2022 - 2026
-                  </span>
-
-                </div>
-
-
-                <div className="w-full h-[1px] bg-black/10 my-4" />
-
-
-                <p
-                  className="
-                    text-sm
-                    md:text-base
-                    text-black/80
-                  "
-                >
-                  Software Engineering, Data Structures and
-                  Algorithms, SDLC, Web Design, Web Development,
-                  Graphic Design, UI/UX, Human-Computer
-                  Interaction
-                </p>
-
-              </div>
+              
 
 
               {/* DACHSHUND + TOOLS */}
@@ -1039,6 +960,87 @@ function Home() {
                   </div>
 
                 </div>
+
+                
+
+              </div>
+
+              {/* EDUCATION */}
+
+              <div
+                className="
+                  bg-gray-50
+                  backdrop-blur-md
+                  hover:shadow-lg/5
+                  rounded-3xl
+                  p-6
+                  md:p-8
+                  transition-all
+                  ease-in-out
+                  duration-300
+                "
+              >
+
+                <h3
+                  className="
+                    text-xs
+                    md:text-sm
+                    font-semibold
+                    opacity-60
+                    mb-2
+                  "
+                >
+                  Education
+                </h3>
+
+
+                <header
+                  className="
+                    text-xl
+                    md:text-2xl
+                    font-bold
+                  "
+                >
+                  University of San Agustin
+                </header>
+
+
+                <div
+                  className="
+                    flex
+                    justify-between
+                    items-center
+                    mb-4
+                    text-xs
+                    md:text-sm
+                    opacity-60
+                  "
+                >
+
+                  <span>
+                    BS in Computer Science
+                  </span>
+
+                  <span>
+                    2022 - 2026
+                  </span>
+
+                </div>
+
+                <div className="w-full h-[1px] bg-black/10 my-4" />
+
+                <p
+                  className="
+                    text-sm
+                    md:text-base
+                    text-black/80
+                  "
+                >
+                  Software Engineering, Data Structures and
+                  Algorithms, SDLC, Web Design, Web Development,
+                  Graphic Design, UI/UX, Human-Computer
+                  Interaction
+                </p>
 
               </div>
 
