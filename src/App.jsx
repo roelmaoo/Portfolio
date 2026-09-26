@@ -1,7 +1,6 @@
 import Grainient from './components/Grainient';
 import ProjectMorph from './pages/ProjectMorph';
 import CustomCursor from './components/CustomCursor';
-import SmoothScroll from './components/SmoothScroll';
 
 import {
   BrowserRouter,
@@ -1589,7 +1588,7 @@ export default function App() {
   
     <BrowserRouter>
       <CustomCursor />
-      <SmoothScroll />
+      {/* <SmoothScroll /> */}
       <Routes>
 
         {/* Main portfolio */}
