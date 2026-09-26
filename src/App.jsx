@@ -1,5 +1,7 @@
 import Grainient from './components/Grainient';
 import ProjectMorph from './pages/ProjectMorph';
+import CustomCursor from './components/CustomCursor';
+import SmoothScroll from './components/SmoothScroll';
 
 import {
   BrowserRouter,
@@ -48,7 +50,7 @@ function Home() {
 
     const handleScroll = () => {
 
-      if (window.scrollY > 100) {
+      if (window.scrollY > 900) {
         setIsPastHero(true);
       } else {
         setIsPastHero(false);
@@ -197,7 +199,7 @@ function Home() {
 
   return (
 
-    <>
+    <div className="selection:bg-black selection:text-white cursor-none">
 
       {/* ======================================================
           HERO
@@ -1571,7 +1573,7 @@ function Home() {
 
       </section>
 
-    </>
+    </div>
 
   );
 }
@@ -1586,7 +1588,8 @@ export default function App() {
   return (
   
     <BrowserRouter>
-
+      <CustomCursor />
+      <SmoothScroll />
       <Routes>
 
         {/* Main portfolio */}

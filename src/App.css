@@ -11,6 +11,7 @@
 html {
     color: var(--color-black); 
     scroll-behavior: smooth;
+    scroll-padding: 80px;
     &::-webkit-scrollbar {
         display: none;
     }
@@ -19,4 +20,14 @@ html {
 @keyframes shrink {
   from { width: 0%; }
   to { width: 100%; }
+}
+
+html,
+body,
+button,
+a,
+input,
+textarea,
+select {
+  cursor: none !important;
 }
