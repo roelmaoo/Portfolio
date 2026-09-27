@@ -1,6 +1,6 @@
 export default function ProjectMorph() {
   return (
-    <div className="min-h-screen p-10">
+    <div className="max-w-6xl mx-auto min-h-screen mt-10">
 
         <a href="/" className="text-blue-500 hover:underline">
           &larr; Go back

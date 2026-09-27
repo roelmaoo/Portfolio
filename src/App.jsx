@@ -812,7 +812,7 @@ function Home() {
                     backdrop-blur-md
                     hover:shadow-xl/5
                     rounded-3xl
-                    p-6
+                    p-1
                     flex
                     flex-col
                     items-center
@@ -831,8 +831,8 @@ function Home() {
                     <div
                       className="
                         absolute
-                        inset-8
-                        rounded-2xl
+                        inset-3
+                        rounded-xl
                         overflow-hidden
                         shadow
                         transition-all
