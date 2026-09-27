@@ -123,7 +123,7 @@ function Home() {
         "AI-assisted fitness app for personalized workouts",
       tags:
         "PRODUCT DESIGN — FIGMA — MOBILE APP",
-      year: "2026",
+      year: "Case Study",
 
       // Internal React route
       path: "/projects/morph"
@@ -137,7 +137,7 @@ function Home() {
         "A pet adoption platform connecting animals with loving homes",
       tags:
         "PRODUCT DESIGN — REACTJS — FRONTEND",
-      year: "2025",
+      year: "Website",
 
       // External website
       link:
@@ -152,7 +152,7 @@ function Home() {
         "A community-driven platform for sharing and discussing ideas",
       tags:
         "UX RESEARCH — FIGMA — MOBILE APP",
-      year: "2024",
+      year: "Case Study",
 
       // External website
       link:
@@ -167,7 +167,7 @@ function Home() {
         "A simple and intuitive task management application",
       tags:
         "UX RESEARCH — FIGMA — WEB & MOBILE APP",
-      year: "2026",
+      year: "Case Study",
 
       // External website
       link:
@@ -182,7 +182,7 @@ function Home() {
         "A mobile app for commuters to track jeepney routes in real-time",
       tags:
         "UX RESEARCH — REACTJS — FULLSTACK",
-      year: "2025",
+      year: "Website",
 
       // External website
       link:
@@ -1154,7 +1154,7 @@ function Home() {
                 text-sm
                 md:text-lg
                 font-semibold
-                uppercase
+                
                 tracking-wider
                 opacity-70
               "
@@ -1284,6 +1284,7 @@ function Home() {
                           md:text-lg
                           font-mono
                           font-medium
+                          tracking-tighter
                         "
                       >
                         {project.year}
