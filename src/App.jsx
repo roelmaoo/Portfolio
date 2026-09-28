@@ -1148,7 +1148,7 @@ function Home() {
 
         <div className="max-w-6xl mx-auto w-full">
 
-          <div className="mb-10">
+          <div className="flex gap-4 mb-10">
 
             <h2
               className="
@@ -1158,9 +1158,54 @@ function Home() {
                 
                 tracking-wider
                 opacity-70
+                hover:bg-black/20
+                p-2
+                px-4
+                rounded-full
+                transition-all
+                duration-300
+
               "
             >
-              Projects
+              UI/UX
+            </h2>
+
+            <h2
+              className="
+                text-sm
+                md:text-lg
+                font-semibold
+                
+                tracking-wider
+                opacity-70
+                hover:bg-black/20
+                p-2
+                px-4
+                rounded-full
+                transition-all
+                duration-300
+              "
+            >
+              Graphic Design
+            </h2>
+
+            <h2
+              className="
+                text-sm
+                md:text-lg
+                font-semibold
+                
+                tracking-wider
+                opacity-70
+                hover:bg-black/10
+                p-2
+                px-4
+                rounded-full
+                transition-all
+                duration-300
+              "
+            >
+              Video
             </h2>
 
           </div>

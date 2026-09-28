@@ -268,7 +268,7 @@ export default function ProjectMorph() {
         </p>
 
         {/* Flow diagram/image */}
-        <div className="mt-16 rounded-3xl bg-gray-100 p-8">
+        <div className="mt-16 rounded-3xl bg-black p-8">
 
           <img
             src="/images/morph-user-flow.png"
@@ -285,7 +285,7 @@ export default function ProjectMorph() {
           WIREFRAMES
       ===================================================== */}
 
-      <section className="bg-gray-100 px-6 md:px-10 py-32">
+      <section className="bg-black px-6 md:px-10 py-32 text-white">
 
         <div className="max-w-6xl mx-auto">
 
