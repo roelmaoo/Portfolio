@@ -117,93 +117,161 @@ function Home() {
   // ============================================================
 
   const projectsList = [
-  // UI/UX
-  {
-    id: "01",
-    title: "Morph",
-    category: "UI/UX",
-    subtitle: "AI-assisted fitness app for personalized workouts",
-    tags: "PRODUCT DESIGN — FIGMA — MOBILE APP",
-    year: "2026",
-    path: "/projects/morph"
-  },
-  {
-    id: "02",
-    title: "Paw Haven",
-    category: "UI/UX",
-    subtitle: "A pet adoption platform connecting animals with loving homes",
-    tags: "PRODUCT DESIGN — REACTJS — FRONTEND",
-    year: "2025",
-    link: "https://pawhaven-byroel.vercel.app/"
-  },
-  {
-    id: "03",
-    title: "USA Forum",
-    category: "UI/UX",
-    subtitle: "A community-driven platform for sharing and discussing ideas",
-    tags: "UX RESEARCH — FIGMA — MOBILE APP",
-    year: "2024",
-    link: "https://www.figma.com/"
-  },
-  {
-    id: "04",
-    title: "TODO App",
-    category: "UI/UX",
-    subtitle: "A simple and intuitive task management application",
-    tags: "UX RESEARCH — FIGMA — WEB & MOBILE",
-    year: "2026",
-    link: "https://www.figma.com/"
-  },
 
-  // GRAPHIC DESIGN
-  {
-    id: "01",
-    title: "Brand Identity",
-    category: "Graphic Design",
-    subtitle: "A visual identity system created for a fictional brand",
-    tags: "BRANDING — LOGO — VISUAL IDENTITY",
-    year: "2026",
-    link: "#"
-  },
-  {
-    id: "02",
-    title: "Poster Collection",
-    category: "Graphic Design",
-    subtitle: "A collection of experimental poster compositions",
-    tags: "POSTER — TYPOGRAPHY — COMPOSITION",
-    year: "2025",
-    link: "#"
-  },
-  {
-    id: "03",
-    title: "Social Media Designs",
-    category: "Graphic Design",
-    subtitle: "Social media graphics and promotional materials",
-    tags: "SOCIAL MEDIA — GRAPHICS — DESIGN",
-    year: "2025",
-    link: "#"
-  },
+    // ============================================================
+    // UI / UX
+    // ============================================================
 
-  // VIDEO
-  {
-    id: "01",
-    title: "Motion Study",
-    category: "Video",
-    subtitle: "An experimental motion graphics piece",
-    tags: "MOTION GRAPHICS — EDITING — ANIMATION",
-    year: "2026",
-    link: "#"
-  },
-  {
-    id: "02",
-    title: "Project Trailer",
-    category: "Video",
-    subtitle: "A short promotional trailer for a personal project",
-    tags: "VIDEO — EDITING — STORYTELLING",
-    year: "2025",
-    link: "#"
-  }
-];
+    {
+      id: "01",
+      title: "Morph",
+      category: "UI/UX",
+      subtitle:
+        "AI-assisted fitness app for personalized workouts",
+      tags:
+        "PRODUCT DESIGN — FIGMA — MOBILE APP",
+      year: "2026",
+
+      // Internal React route
+      path: "/projects/morph"
+    },
+
+    {
+      id: "02",
+      title: "Paw Haven",
+      category: "UI/UX",
+      subtitle:
+        "A pet adoption platform connecting animals with loving homes",
+      tags:
+        "PRODUCT DESIGN — REACTJS — FRONTEND",
+      year: "2025",
+
+      link:
+        "https://pawhaven-byroel.vercel.app/"
+    },
+
+    {
+      id: "03",
+      title: "USA Forum",
+      category: "UI/UX",
+      subtitle:
+        "A community-driven platform for sharing and discussing ideas",
+      tags:
+        "UX RESEARCH — FIGMA — MOBILE APP",
+      year: "2024",
+
+      link:
+        "https://www.figma.com/proto/v4xkM7vdJcViilDusOWGpd/Case-Study-and-Projects?node-id=974-3055&p=f&t=CQ2LGZvJAlFSm8ku-0&scaling=min-zoom&content-scaling=fixed&page-id=969%3A82&starting-point-node-id=974%3A3055"
+    },
+
+    {
+      id: "04",
+      title: "TODO App",
+      category: "UI/UX",
+      subtitle:
+        "A simple and intuitive task management application",
+      tags:
+        "UX RESEARCH — FIGMA — WEB & MOBILE APP",
+      year: "2026",
+
+      link:
+        "https://www.figma.com/proto/VrG0C6u9yQKqO7MCbN3LdW/UI-Design-Assessment-Docto?node-id=0-1&p=f&t=V08nAtd8WGX7Vlch-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=64%3A746&show-proto-sidebar=1&fuid=1601835686234775557"
+    },
+
+    {
+      id: "05",
+      title: "Jeepney Routes",
+      category: "UI/UX",
+      subtitle:
+        "A mobile app for commuters to track jeepney routes in real-time",
+      tags:
+        "UX RESEARCH — REACTJS — FULLSTACK",
+      year: "2025",
+
+      link:
+        "https://iloilojeepneyroutes.vercel.app/"
+    },
+
+
+    // ============================================================
+    // GRAPHIC DESIGN
+    // ============================================================
+
+    {
+      id: "01",
+      title: "Brand Identity",
+      category: "Graphic Design",
+      subtitle:
+        "A visual identity system created for a fictional brand",
+      tags:
+        "BRANDING — LOGO — VISUAL IDENTITY",
+      year: "2026",
+
+      link: "#"
+    },
+
+    {
+      id: "02",
+      title: "Poster Collection",
+      category: "Graphic Design",
+      subtitle:
+        "A collection of experimental poster compositions",
+      tags:
+        "POSTER — TYPOGRAPHY — COMPOSITION",
+      year: "2025",
+
+      link: "#"
+    },
+
+    {
+      id: "03",
+      title: "Social Media Designs",
+      category: "Graphic Design",
+      subtitle:
+        "Social media graphics and promotional materials",
+      tags:
+        "SOCIAL MEDIA — GRAPHICS — DESIGN",
+      year: "2025",
+
+      link: "#"
+    },
+
+
+    // ============================================================
+    // VIDEO
+    // ============================================================
+
+    {
+      id: "01",
+      title: "Motion Study",
+      category: "Video",
+      subtitle:
+        "An experimental motion graphics piece",
+      tags:
+        "MOTION GRAPHICS — EDITING — ANIMATION",
+      year: "2026",
+
+      link: "#"
+    },
+
+    {
+      id: "02",
+      title: "Project Trailer",
+      category: "Video",
+      subtitle:
+        "A short promotional trailer for a personal project",
+      tags:
+        "VIDEO — EDITING — STORYTELLING",
+      year: "2025",
+
+      link: "#"
+    }
+
+  ];
+
+    const filteredProjects = projectsList.filter(
+      (project) => project.category === activeCategory
+    );
 
 
   // ============================================================
@@ -1161,51 +1229,63 @@ function Home() {
 
         <div className="max-w-6xl mx-auto w-full">
 
-          <div className="flex gap-4 mb-10">
+          {/* ====================================================
+              CATEGORY FILTER
+          ==================================================== */}
 
-            <div className="flex flex-wrap gap-2 mb-10">
+          <div className="flex flex-wrap gap-2 mb-10">
 
-  {["UI/UX", "Graphic Design", "Video"].map((category) => (
-    <button
-      key={category}
-      onClick={() => setActiveCategory(category)}
-      className={`
-        text-sm
-        md:text-lg
-        font-semibold
-        tracking-wider
-        p-2
-        px-4
-        rounded-full
-        transition-all
-        duration-300
-        cursor-pointer
+            {["UI/UX", "Graphic Design", "Video"].map((category) => (
 
-        ${
-          activeCategory === category
-            ? "bg-black text-white"
-            : "bg-transparent text-black/60 hover:bg-black/10"
-        }
-      `}
-    >
-      {category}
-    </button>
-  ))}
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`
+                  text-sm
+                  md:text-lg
+                  font-semibold
+                  tracking-wider
+                  p-2
+                  px-4
+                  rounded-full
+                  transition-all
+                  duration-300
+                  cursor-pointer
 
-</div>
+                  ${
+                    activeCategory === category
+                      ? "bg-black text-white"
+                      : "bg-transparent text-black/60 hover:bg-black/10"
+                  }
+                `}
+              >
+                {category}
+              </button>
+
+            ))}
 
           </div>
 
 
+          {/* ====================================================
+              PROJECT LIST
+          ==================================================== */}
+
           <div className="border-t border-black/20">
 
-            {projectsList.map((project) => {
+            {filteredProjects.map((project) => {
+
+              /* ------------------------------------------------
+                PROJECT CONTENT
+              ------------------------------------------------ */
 
               const projectContent = (
 
                 <>
 
-                  {/* LEFT SIDE */}
+                  {/* ============================================
+                      LEFT SIDE
+                  ============================================ */}
 
                   <div
                     className="
@@ -1214,8 +1294,11 @@ function Home() {
                       md:items-center
                       gap-4
                       md:gap-16
+                      min-w-0
                     "
                   >
+
+                    {/* Project number */}
 
                     <span
                       className="
@@ -1225,13 +1308,16 @@ function Home() {
                         text-black/60
                         pt-2
                         md:pt-0
+                        flex-shrink-0
                       "
                     >
                       {project.id}
                     </span>
 
 
-                    <div>
+                    {/* Title + description */}
+
+                    <div className="min-w-0">
 
                       <h3
                         className="
@@ -1268,7 +1354,9 @@ function Home() {
                   </div>
 
 
-                  {/* RIGHT SIDE */}
+                  {/* ============================================
+                      RIGHT SIDE
+                  ============================================ */}
 
                   <div
                     className="
@@ -1282,8 +1370,11 @@ function Home() {
                       md:mt-0
                       w-full
                       md:w-auto
+                      min-w-0
                     "
                   >
+
+                    {/* Tags */}
 
                     <span
                       className="
@@ -1293,11 +1384,14 @@ function Home() {
                         font-mono
                         text-black/60
                         tracking-wider
+                        break-words
                       "
                     >
                       {project.tags}
                     </span>
 
+
+                    {/* Year + Arrow */}
 
                     <div
                       className="
@@ -1339,6 +1433,7 @@ function Home() {
                           group-hover:text-white
                           transition-all
                           duration-300
+                          flex-shrink-0
                         "
                       >
 
@@ -1360,16 +1455,16 @@ function Home() {
               );
 
 
-              // ------------------------------------------------
-              // INTERNAL PROJECT
-              // ------------------------------------------------
+              /* ==================================================
+                INTERNAL PROJECT
+              ================================================== */
 
               if (project.path) {
 
                 return (
 
                   <Link
-                    key={project.id}
+                    key={`${activeCategory}-${project.id}`}
                     to={project.path}
                     className="
                       group
@@ -1384,13 +1479,14 @@ function Home() {
                       border-b
                       border-black/20
                       cursor-pointer
-                      transition-colors
+                      transition-all
                       duration-300
                       hover:bg-white/10
                       px-2
                       md:px-4
                       gap-4
                       md:gap-0
+                      overflow-hidden
                     "
                   >
 
@@ -1403,14 +1499,14 @@ function Home() {
               }
 
 
-              // ------------------------------------------------
-              // EXTERNAL PROJECT
-              // ------------------------------------------------
+              /* ==================================================
+                EXTERNAL PROJECT
+              ================================================== */
 
               return (
 
                 <a
-                  key={project.id}
+                  key={`${activeCategory}-${project.id}`}
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -1427,13 +1523,14 @@ function Home() {
                     border-b
                     border-black/20
                     cursor-pointer
-                    transition-colors
+                    transition-all
                     duration-300
                     hover:bg-white/10
                     px-2
                     md:px-4
                     gap-4
                     md:gap-0
+                    overflow-hidden
                   "
                 >
 
