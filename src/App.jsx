@@ -40,6 +40,7 @@ function Home() {
   const [isOpen, toggleIsOpen] = useState(false);
   const [isPastHero, setIsPastHero] = useState(false);
   const [dachshundImg, setDachshundImg] = useState('');
+  const [activeCategory, setActiveCategory] = useState("UI/UX");
 
 
   // ------------------------------------------------------------
@@ -116,81 +117,93 @@ function Home() {
   // ============================================================
 
   const projectsList = [
+  // UI/UX
+  {
+    id: "01",
+    title: "Morph",
+    category: "UI/UX",
+    subtitle: "AI-assisted fitness app for personalized workouts",
+    tags: "PRODUCT DESIGN — FIGMA — MOBILE APP",
+    year: "2026",
+    path: "/projects/morph"
+  },
+  {
+    id: "02",
+    title: "Paw Haven",
+    category: "UI/UX",
+    subtitle: "A pet adoption platform connecting animals with loving homes",
+    tags: "PRODUCT DESIGN — REACTJS — FRONTEND",
+    year: "2025",
+    link: "https://pawhaven-byroel.vercel.app/"
+  },
+  {
+    id: "03",
+    title: "USA Forum",
+    category: "UI/UX",
+    subtitle: "A community-driven platform for sharing and discussing ideas",
+    tags: "UX RESEARCH — FIGMA — MOBILE APP",
+    year: "2024",
+    link: "https://www.figma.com/"
+  },
+  {
+    id: "04",
+    title: "TODO App",
+    category: "UI/UX",
+    subtitle: "A simple and intuitive task management application",
+    tags: "UX RESEARCH — FIGMA — WEB & MOBILE",
+    year: "2026",
+    link: "https://www.figma.com/"
+  },
 
-    {
-      id: "01",
-      title: "Morph",
-      subtitle:
-        "AI-assisted fitness app for personalized workouts",
-      tags:
-        "PRODUCT DESIGN — FIGMA — MOBILE APP",
-      year: "Case Study",
+  // GRAPHIC DESIGN
+  {
+    id: "01",
+    title: "Brand Identity",
+    category: "Graphic Design",
+    subtitle: "A visual identity system created for a fictional brand",
+    tags: "BRANDING — LOGO — VISUAL IDENTITY",
+    year: "2026",
+    link: "#"
+  },
+  {
+    id: "02",
+    title: "Poster Collection",
+    category: "Graphic Design",
+    subtitle: "A collection of experimental poster compositions",
+    tags: "POSTER — TYPOGRAPHY — COMPOSITION",
+    year: "2025",
+    link: "#"
+  },
+  {
+    id: "03",
+    title: "Social Media Designs",
+    category: "Graphic Design",
+    subtitle: "Social media graphics and promotional materials",
+    tags: "SOCIAL MEDIA — GRAPHICS — DESIGN",
+    year: "2025",
+    link: "#"
+  },
 
-      // Internal React route
-      path: "/projects/morph"
-    },
-
-
-    {
-      id: "02",
-      title: "Paw Haven",
-      subtitle:
-        "A pet adoption platform connecting animals with loving homes",
-      tags:
-        "PRODUCT DESIGN — REACTJS — FRONTEND",
-      year: "Website",
-
-      // External website
-      link:
-        "https://pawhaven-byroel.vercel.app/"
-    },
-
-
-    {
-      id: "03",
-      title: "USA Forum",
-      subtitle:
-        "A community-driven platform for sharing and discussing ideas",
-      tags:
-        "UX RESEARCH — FIGMA — MOBILE APP",
-      year: "Case Study",
-
-      // External website
-      link:
-        "https://www.figma.com/proto/v4xkM7vdJcViilDusOWGpd/Case-Study-and-Projects?node-id=974-3055&p=f&t=CQ2LGZvJAlFSm8ku-0&scaling=min-zoom&content-scaling=fixed&page-id=969%3A82&starting-point-node-id=974%3A3055"
-    },
-
-
-    {
-      id: "04",
-      title: "TODO app",
-      subtitle:
-        "A simple and intuitive task management application",
-      tags:
-        "UX RESEARCH — FIGMA — WEB & MOBILE APP",
-      year: "Case Study",
-
-      // External website
-      link:
-        "https://www.figma.com/proto/VrG0C6u9yQKqO7MCbN3LdW/UI-Design-Assessment-Docto?node-id=0-1&p=f&t=V08nAtd8WGX7Vlch-0&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=64%3A746&show-proto-sidebar=1&fuid=1601835686234775557"
-    },
-
-
-    {
-      id: "05",
-      title: "Jeepney Routes",
-      subtitle:
-        "A mobile app for commuters to track jeepney routes in real-time",
-      tags:
-        "UX RESEARCH — REACTJS — FULLSTACK",
-      year: "Website",
-
-      // External website
-      link:
-        "https://iloilojeepneyroutes.vercel.app/"
-    }
-
-  ];
+  // VIDEO
+  {
+    id: "01",
+    title: "Motion Study",
+    category: "Video",
+    subtitle: "An experimental motion graphics piece",
+    tags: "MOTION GRAPHICS — EDITING — ANIMATION",
+    year: "2026",
+    link: "#"
+  },
+  {
+    id: "02",
+    title: "Project Trailer",
+    category: "Video",
+    subtitle: "A short promotional trailer for a personal project",
+    tags: "VIDEO — EDITING — STORYTELLING",
+    year: "2025",
+    link: "#"
+  }
+];
 
 
   // ============================================================
@@ -1150,63 +1163,36 @@ function Home() {
 
           <div className="flex gap-4 mb-10">
 
-            <h2
-              className="
-                text-sm
-                md:text-lg
-                font-semibold
-                
-                tracking-wider
-                opacity-70
-                hover:bg-black/20
-                p-2
-                px-4
-                rounded-full
-                transition-all
-                duration-300
+            <div className="flex flex-wrap gap-2 mb-10">
 
-              "
-            >
-              UI/UX
-            </h2>
+  {["UI/UX", "Graphic Design", "Video"].map((category) => (
+    <button
+      key={category}
+      onClick={() => setActiveCategory(category)}
+      className={`
+        text-sm
+        md:text-lg
+        font-semibold
+        tracking-wider
+        p-2
+        px-4
+        rounded-full
+        transition-all
+        duration-300
+        cursor-pointer
 
-            <h2
-              className="
-                text-sm
-                md:text-lg
-                font-semibold
-                
-                tracking-wider
-                opacity-70
-                hover:bg-black/20
-                p-2
-                px-4
-                rounded-full
-                transition-all
-                duration-300
-              "
-            >
-              Graphic Design
-            </h2>
+        ${
+          activeCategory === category
+            ? "bg-black text-white"
+            : "bg-transparent text-black/60 hover:bg-black/10"
+        }
+      `}
+    >
+      {category}
+    </button>
+  ))}
 
-            <h2
-              className="
-                text-sm
-                md:text-lg
-                font-semibold
-                
-                tracking-wider
-                opacity-70
-                hover:bg-black/10
-                p-2
-                px-4
-                rounded-full
-                transition-all
-                duration-300
-              "
-            >
-              Video
-            </h2>
+</div>
 
           </div>
 
