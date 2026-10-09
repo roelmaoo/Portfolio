@@ -1607,6 +1607,18 @@ function Home() {
                 Let's work together!
               </p>
 
+              <p
+                className="
+                  text-xl
+                  md:text-2xl
+                  lg:text-3xl
+                  font-semibold
+                  mb-4
+                "
+              >
+                Let's work together!
+              </p>
+
 
               <p
                 className="
