@@ -1196,13 +1196,13 @@ function Home() {
             "
           >
 
-            {/* <p>User Research</p>
+            <p>User Research</p>
             <p>Wireframing</p>
             <p>Prototyping</p>
             <p>Usability Testing</p>
             <p>Accessibility</p>
             <p>WCAG Compliance</p>
-            <p>User Flow</p> */}
+            <p>User Flow</p>
 
           </div>
 
