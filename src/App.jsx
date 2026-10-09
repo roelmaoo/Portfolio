@@ -1203,6 +1203,7 @@ function Home() {
             <p>Accessibility</p>
             <p>WCAG Compliance</p>
             <p>User Flow</p>
+            <p>Design System</p>
 
           </div>
 
@@ -1594,30 +1595,6 @@ function Home() {
           >
 
             <div className="flex-1 max-w-2xl">
-
-              <p
-                className="
-                  text-xl
-                  md:text-2xl
-                  lg:text-3xl
-                  font-semibold
-                  mb-4
-                "
-              >
-                Let's work together!
-              </p>
-
-              <p
-                className="
-                  text-xl
-                  md:text-2xl
-                  lg:text-3xl
-                  font-semibold
-                  mb-4
-                "
-              >
-                Let's work together!
-              </p>
 
               <p
                 className="
