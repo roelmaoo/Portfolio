@@ -1203,7 +1203,6 @@ function Home() {
             <p>Accessibility</p>
             <p>WCAG Compliance</p>
             <p>User Flow</p>
-            <p>Design System</p>
 
           </div>
 
