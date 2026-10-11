@@ -400,6 +400,21 @@ function Home() {
               Design is how it works.
             </p>
 
+            <p>
+              Design is not just what it looks like and feels like.
+              Design is how it works.
+            </p>
+
+            <p>
+              Design is not just what it looks like and feels like.
+              Design is how it works.
+            </p>
+
+            <p>
+              Design is not just what it looks like and feels like.
+              Design is how it works.
+            </p>
+
             <p className="text-sm md:text-base mt-2">
               - Steve Jobs
             </p>
