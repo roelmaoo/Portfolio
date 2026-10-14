@@ -402,7 +402,7 @@ function Home() {
             
 
             <p className="text-sm md:text-base mt-2">
-              - Steve Jobs
+              - This is a test 
             </p>
 
           </div>
