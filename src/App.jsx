@@ -340,7 +340,6 @@ function Home() {
               font-extrabold
               md:text-8xl
               lg:text-[180px]
-              tracking-[-10px]
               md:tracking-[-25px]
             "
           >
@@ -402,7 +401,7 @@ function Home() {
             
 
             <p className="text-sm md:text-base mt-2">
-              - This is a test 
+              - Steve Jobs
             </p>
 
           </div>
