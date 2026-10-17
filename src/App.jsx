@@ -2,6 +2,7 @@ import Grainient from './components/Grainient';
 import ProjectMorph from './pages/ProjectMorph';
 import CustomCursor from './components/CustomCursor';
 import ScrollManager from './components/ScrollManager';
+import pulsarMouseVideo from './assets/videos/PulsarMouse-CampaignAd.mov';
 
 import {
   BrowserRouter,
@@ -243,15 +244,12 @@ function Home() {
 
     {
       id: "01",
-      title: "Motion Study",
+      title: "Pulsar Mouse Campaign Ad",
       category: "Video",
-      subtitle:
-        "An experimental motion graphics piece",
-      tags:
-        "MOTION GRAPHICS — EDITING — ANIMATION",
+      subtitle: "Campaign advertisement for Pulsar Mouse",
+      tags: "VIDEO — EDITING — CAMPAIGN",
       year: "2026",
-
-      link: "#"
+      video: pulsarMouseVideo
     },
 
     {
@@ -1276,9 +1274,49 @@ function Home() {
 
             {filteredProjects.map((project) => {
 
-              /* ------------------------------------------------
-                PROJECT CONTENT
-              ------------------------------------------------ */
+              // Render video projects directly in the section
+              if (project.video) {
+                return (
+                  <div
+                    key={`${activeCategory}-${project.id}`}
+                    className="border-b border-black/20 py-8 md:py-12"
+                  >
+                    {/* Video title and details */}
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 mb-6">
+                      <div>
+                        <p className="text-xs font-mono text-black/50 mb-2">
+                          {project.id} / {project.year}
+                        </p>
+
+                        <h3 className="text-3xl md:text-5xl lg:text-7xl font-extrabold tracking-tight">
+                          {project.title}
+                        </h3>
+
+                        <p className="text-sm md:text-base text-black/70 mt-2">
+                          {project.subtitle}
+                        </p>
+                      </div>
+
+                      <span className="text-xs font-mono text-black/60 tracking-wider">
+                        {project.tags}
+                      </span>
+                    </div>
+
+                    {/* Campaign video */}
+                    <div className="w-full overflow-hidden rounded-2xl bg-black">
+                      <video
+                        className="block w-full h-auto"
+                        src={project.video}
+                        controls
+                        playsInline
+                        preload="metadata"
+                      >
+                        Your browser does not support video playback.
+                      </video>
+                    </div>
+                  </div>
+                );
+              }
 
               const projectContent = (
 
