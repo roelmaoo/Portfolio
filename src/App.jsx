@@ -3,6 +3,16 @@ import ProjectMorph from './pages/ProjectMorph';
 import CustomCursor from './components/CustomCursor';
 import ScrollManager from './components/ScrollManager';
 
+// Video
+import pulsarMouseVideo from './assets/videos/PulsarMouse-CampaignAd.mov';
+
+// Graphic Design
+import bannerVideo from './assets/Graphics/bannerwel.mp4';
+import YTThumbnail from './assets/Graphics/FrontendYTThumbnail.png';
+import AntiSmokingAd from './assets/Graphics/AntiSmokingAdvocacy.png';
+import CSBrochure1 from './assets/Graphics/1.png';
+import CSBrochure2 from './assets/Graphics/2.png';
+
 import {
   BrowserRouter,
   Link,
@@ -41,6 +51,7 @@ function Home() {
   const [isPastHero, setIsPastHero] = useState(false);
   const [dachshundImg, setDachshundImg] = useState('');
   const [activeCategory, setActiveCategory] = useState("UI/UX");
+  const [activeSlides, setActiveSlides] = useState({});
 
 
   // ------------------------------------------------------------
@@ -199,20 +210,17 @@ function Home() {
 
     {
       id: "01",
-      title: "Brand Identity",
+      title: "Reddit Memes Banner",
       category: "Graphic Design",
-      subtitle:
-        "A visual identity system created for a fictional brand",
-      tags:
-        "BRANDING — LOGO — VISUAL IDENTITY",
+      subtitle: "An animated banner featuring neon typography and particle effects",
+      tags: "MOTION DESIGN — TYPOGRAPHY — VISUAL EFFECTS",
       year: "2026",
-
-      link: "#"
+      video: bannerVideo
     },
 
     {
       id: "02",
-      title: "Poster Collection",
+      title: "Poster Advocacy",
       category: "Graphic Design",
       subtitle:
         "A collection of experimental poster compositions",
@@ -220,21 +228,31 @@ function Home() {
         "POSTER — TYPOGRAPHY — COMPOSITION",
       year: "2025",
 
-      link: "#"
+      image: AntiSmokingAd
     },
+
+    
 
     {
       id: "03",
-      title: "Social Media Designs",
+      title: "Computer Science Brochure",
       category: "Graphic Design",
-      subtitle:
-        "Social media graphics and promotional materials",
-      tags:
-        "SOCIAL MEDIA — GRAPHICS — DESIGN",
+      subtitle: "A two-page brochure showcasing computer science",
+      tags: "BROCHURE — LAYOUT — EDITORIAL DESIGN",
       year: "2025",
-
-      link: "#"
+      images: [CSBrochure1, CSBrochure2]
     },
+
+    {
+      id: "04",
+      title: "Frontend YouTube Thumbnail",
+      category: "Graphic Design",
+      subtitle: "A custom thumbnail for frontend development content",
+      tags: "THUMBNAIL — TYPOGRAPHY — DIGITAL DESIGN",
+      year: "2025",
+      image: YTThumbnail
+    },
+
 
 
     // ============================================================
@@ -243,15 +261,12 @@ function Home() {
 
     {
       id: "01",
-      title: "Motion Study",
+      title: "Pulsar Mouse Campaign Ad",
       category: "Video",
-      subtitle:
-        "An experimental motion graphics piece",
-      tags:
-        "MOTION GRAPHICS — EDITING — ANIMATION",
+      subtitle: "Campaign advertisement for Pulsar Mouse",
+      tags: "VIDEO — EDITING — CAMPAIGN",
       year: "2026",
-
-      link: "#"
+      video: pulsarMouseVideo
     },
 
     {
@@ -1276,9 +1291,112 @@ function Home() {
 
             {filteredProjects.map((project) => {
 
-              /* ------------------------------------------------
-                PROJECT CONTENT
-              ------------------------------------------------ */
+              // Render video projects directly in the section
+              
+              {/* MEDIA PROJECTS: VIDEOS, IMAGES, AND CAROUSELS */}
+
+              if (
+                project.video ||
+                project.image ||
+                project.images?.length > 0
+              ) {
+                const images = project.images || (project.image ? [project.image] : []);
+                const activeSlide = activeSlides[project.title] || 0;
+
+                return (
+                  <div
+                    key={`${activeCategory}-${project.id}`}
+                    className="border-b border-black/20 py-8 md:py-12"
+                  >
+                    {/* Project details */}
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-3 mb-6">
+                      <div>
+                        <p className="text-xs font-mono text-black/50 mb-2">
+                          {project.id} / {project.year}
+                        </p>
+
+                        <h3 className="text-3xl md:text-5xl lg:text-7xl font-extrabold tracking-tight">
+                          {project.title}
+                        </h3>
+
+                        <p className="text-sm md:text-base text-black/70 mt-2">
+                          {project.subtitle}
+                        </p>
+                      </div>
+
+                      <span className="text-xs font-mono text-black/60 tracking-wider">
+                        {project.tags}
+                      </span>
+                    </div>
+
+                    {/* Video display */}
+                    {project.video && (
+                      <div className="w-full overflow-hidden rounded-2xl bg-black">
+                        <video
+                          className="block w-full h-auto"
+                          src={project.video}
+                          controls
+                          playsInline
+                          preload="metadata"
+                        >
+                          Your browser does not support video playback.
+                        </video>
+                      </div>
+                    )}
+
+                    {/* Image display and optional carousel */}
+                    {images.length > 0 && (
+                      <div className="relative w-full md:max-w-3xl mx-auto overflow-hidden rounded-2xl bg-gray-100">
+                        <img
+                          src={images[activeSlide]}
+                          alt={project.title}
+                          className="block w-full h-auto object-contain"
+                        />
+
+                        {/* Show carousel controls only when there are multiple images */}
+                        {images.length > 1 && (
+                          <>
+                            <button
+                              type="button"
+                              onClick={() =>
+                                setActiveSlides((prev) => ({
+                                  ...prev,
+                                  [project.title]:
+                                    (activeSlide - 1 + images.length) % images.length
+                                }))
+                              }
+                              aria-label="Previous image"
+                              className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 text-white text-2xl hover:bg-black/80 transition-colors"
+                            >
+                              ‹
+                            </button>
+
+                            <button
+                              type="button"
+                              onClick={() =>
+                                setActiveSlides((prev) => ({
+                                  ...prev,
+                                  [project.title]:
+                                    (activeSlide + 1) % images.length
+                                }))
+                              }
+                              aria-label="Next image"
+                              className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 text-white text-2xl hover:bg-black/80 transition-colors"
+                            >
+                              ›
+                            </button>
+
+                            <span className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/60 text-white text-xs px-3 py-1">
+                              {activeSlide + 1} / {images.length}
+                            </span>
+                          </>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
 
               const projectContent = (
 
