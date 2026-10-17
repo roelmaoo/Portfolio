@@ -228,8 +228,10 @@ function Home() {
         "POSTER — TYPOGRAPHY — COMPOSITION",
       year: "2025",
 
-      link: AntiSmokingAd
+      image: AntiSmokingAd
     },
+
+    
 
     {
       id: "03",
@@ -1344,10 +1346,10 @@ function Home() {
 
                     {/* Image display and optional carousel */}
                     {images.length > 0 && (
-                      <div className="relative w-full overflow-hidden rounded-2xl bg-gray-100">
+                      <div className="relative w-full md:max-w-3xl mx-auto overflow-hidden rounded-2xl bg-gray-100">
                         <img
                           src={images[activeSlide]}
-                          alt={`${project.title} - image ${activeSlide + 1}`}
+                          alt={project.title}
                           className="block w-full h-auto object-contain"
                         />
 
