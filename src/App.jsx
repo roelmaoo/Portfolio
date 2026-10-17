@@ -271,12 +271,12 @@ function Home() {
 
     {
       id: "02",
-      title: "Project Trailer",
+      title: "Placeholder Title",
       category: "Video",
       subtitle:
-        "A short promotional trailer for a personal project",
+        "A placeholder for a placeholder",
       tags:
-        "VIDEO — EDITING — STORYTELLING",
+        "PLACEHOLDER — PLACEHOLDER — STORYTELLING",
       year: "2025",
 
       link: "#"
