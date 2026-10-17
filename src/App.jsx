@@ -3,6 +3,7 @@ import ProjectMorph from './pages/ProjectMorph';
 import CustomCursor from './components/CustomCursor';
 import ScrollManager from './components/ScrollManager';
 import pulsarMouseVideo from './assets/videos/PulsarMouse-CampaignAd.mov';
+import bannerVideo from './assets/Graphics/bannerwel.mp4';
 
 import {
   BrowserRouter,
@@ -200,15 +201,12 @@ function Home() {
 
     {
       id: "01",
-      title: "Brand Identity",
+      title: "Reddit Memes Banner",
       category: "Graphic Design",
-      subtitle:
-        "A visual identity system created for a fictional brand",
-      tags:
-        "BRANDING — LOGO — VISUAL IDENTITY",
+      subtitle: "An animated banner featuring neon typography and particle effects",
+      tags: "MOTION DESIGN — TYPOGRAPHY — VISUAL EFFECTS",
       year: "2026",
-
-      link: "#"
+      video: bannerVideo
     },
 
     {
