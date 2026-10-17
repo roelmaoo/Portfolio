@@ -1346,7 +1346,7 @@ function Home() {
 
                     {/* Image display and optional carousel */}
                     {images.length > 0 && (
-                      <div className="relative w-full md:max-w-3xl mx-auto overflow-hidden rounded-2xl bg-gray-100">
+                      <div className="relative w-full md:max-w-6xl mx-auto overflow-hidden rounded-2xl bg-gray-100">
                         <img
                           src={images[activeSlide]}
                           alt={project.title}
