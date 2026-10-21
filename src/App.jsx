@@ -1676,7 +1676,7 @@ function Home() {
         id="contact"
         className="relative w-full overflow-hidden bg-[#F5F5F0] text-black"
       >
-        <div className="relative z-10 mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16">
+        <div className="relative z-10 max-w-6xl mx-auto w-full">
 
           {/* Main footer content */}
           <div className="py-16 md:py-20 lg:py-24">
@@ -1692,15 +1692,14 @@ function Home() {
 
             {/* Oversized email heading */}
             <a
-              href="mailto:roeldocto8@gmail.com"
               className="group mt-12 block w-fit max-w-full"
             >
               <span className="block text-[clamp(3.5rem,10vw,9rem)] font-black leading-[0.85] tracking-[-0.075em] text-black/40 transition-colors duration-300 group-hover:text-black/60">
-                HELLO@
+                DESIGNS
               </span>
 
               <span className="block break-words text-[clamp(2.5rem,8.2vw,7.5rem)] font-black leading-[0.9] tracking-[-0.075em]">
-                ROELDOCTO.DESIGN
+                BYROEL
               </span>
             </a>
 
@@ -1715,7 +1714,7 @@ function Home() {
                   Email
                 </p>
                 <p className="text-xs font-medium md:text-sm">
-                  hello@roeldocto.design ↗
+                  roeldocto8@gmail.com ↗
                 </p>
               </a>
 
