@@ -1669,157 +1669,133 @@ function Home() {
 
 
       {/* ======================================================
-          CONTACT
+          CONTACT / FOOTER
       ====================================================== */}
 
-      <section
+      <footer
         id="contact"
-        className="
-          z-30
-          w-full
-          px-5
-          md:px-10
-          py-16
-        "
+        className="relative w-full overflow-hidden bg-[#F5F5F0] text-black"
       >
+        <div className="relative z-10 max-w-6xl mx-auto w-full">
 
-        <div className="max-w-6xl mx-auto w-full">
+          {/* Main footer content */}
+          <div className="py-16 md:py-20 lg:py-24">
 
-          <div className="mb-10">
+            {/* Intro text */}
+            <p className="max-w-xl font-serif italic text-2xl leading-tight tracking-tight md:text-3xl lg:text-4xl">
+              Have something worth
+              <br />
+              building? Let’s make it feel
+              <br />
+              inevitable.
+            </p>
 
-            <h2
-              className="
-                text-sm
-                md:text-lg
-                font-semibold
-                uppercase
-                tracking-wider
-                opacity-70
-              "
+            {/* Oversized email heading */}
+            <a
+              className="group mt-12 block w-fit max-w-full"
             >
-              Contact
-            </h2>
+              <span className="block text-[clamp(3.5rem,10vw,9rem)] font-black leading-[0.85] tracking-[-0.075em] text-black/40 transition-colors duration-300 group-hover:text-black/60">
+                DESIGNS
+              </span>
 
-          </div>
+              <span className="block break-words text-[clamp(2.5rem,8.2vw,7.5rem)] font-black leading-[0.9] tracking-[-0.075em]">
+                BYROEL
+              </span>
+            </a>
 
-
-          <div
-            className="
-              flex
-              flex-col
-              md:flex-row
-              justify-between
-              gap-10
-            "
-          >
-
-            <div className="flex-1 max-w-2xl">
-
-              <p
-                className="
-                  text-xl
-                  md:text-2xl
-                  lg:text-3xl
-                  font-semibold
-                  mb-4
-                "
-              >
-                Let's work together!
-              </p>
-
-
-              <p
-                className="
-                  text-sm
-                  md:text-base
-                  lg:text-lg
-                  text-black/70
-                  mb-6
-                "
-              >
-                Feel free to reach out for collaborations,
-                inquiries, or just a friendly chat. I'm always
-                open to new opportunities and connections.
-              </p>
-
-
-              <div className="flex items-center gap-2">
-
-                {/* LinkedIn */}
-
-                <a
-                  href="https://www.linkedin.com/in/roeldoctojr/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="42"
-                    height="42"
-                    viewBox="0 0 24 24"
-                  >
-
-                    <path
-                      fill="currentColor"
-                      d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"
-                    />
-
-                  </svg>
-
-                </a>
-
-
-                {/* WhatsApp */}
-
-                <a>
-
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="42"
-                    height="64"
-                    viewBox="0 0 24 24"
-                  >
-
-                    <path
-                      fill="currentColor"
-                      d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10c-1.89 0-3.66-.525-5.168-1.437l-3.032.891A1.01 1.01 0 0 1 2.546 20.2l.892-3.032A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2M9.785 7.259a.7.7 0 0 0-.683-.075A2.79 2.79 0 0 0 7.494 9.07l-.007.03c-.038.152-.07.331-.063.526c.025.682.292 2.613 2.314 4.636c2.023 2.022 3.954 2.29 4.636 2.314a2 2 0 0 0 .526-.062l.035-.01a2.78 2.78 0 0 0 1.88-1.6a.7.7 0 0 0-.09-.703c-.533-.683-1.248-1.176-1.884-1.615l-.127-.088a.71.71 0 0 0-.974.157l-.6.915a.23.23 0 0 1-.305.076c-.407-.232-1-.629-1.426-1.055s-.798-.992-1.007-1.372a.23.23 0 0 1 .068-.291l.923-.686a.713.713 0 0 0 .12-.94l-.134-.198c-.42-.62-.912-1.348-1.594-1.845"
-                    />
-
-                  </svg>
-
-                </a>
-
-              </div>
-
+            {/* Social and contact links */}
+            <div className="mt-16 grid grid-cols-2 border-t border-black/70 md:grid-cols-3 lg:grid-cols-5">
 
               <a
                 href="mailto:roeldocto8@gmail.com"
-                className="
-                  inline-block
-                  bg-black
-                  text-white
-                  px-6
-                  py-3
-                  rounded-full
-                  text-sm
-                  md:text-base
-                  font-medium
-                  hover:bg-gray-800
-                  transition-colors
-                  mt-4
-                "
+                className="border-b border-black/20 py-5 pr-4 transition-opacity hover:opacity-50 md:border-r md:pr-6 lg:border-b-0"
               >
-                Get in Touch
+                <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
+                  Email
+                </p>
+                <p className="text-xs font-medium md:text-sm">
+                  roeldocto8@gmail.com ↗
+                </p>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/roeldoctojr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-b border-black/20 py-5 pl-4 transition-opacity hover:opacity-50 md:border-r md:px-6 lg:border-b-0"
+              >
+                <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
+                  LinkedIn
+                </p>
+                <p className="text-xs font-medium md:text-sm">
+                  /in/roeldoctojr ↗
+                </p>
+              </a>
+
+              <a
+                href="https://dribbble.com/roeldocto"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-b border-black/20 py-5 pr-4 transition-opacity hover:opacity-50 md:border-r md:pl-6 lg:border-b-0"
+              >
+                <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
+                  Dribbble
+                </p>
+                <p className="text-xs font-medium md:text-sm">
+                  @roeldocto ↗
+                </p>
+              </a>
+
+              <a
+                href="https://github.com/roeldocto"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-b border-black/20 py-5 pl-4 transition-opacity hover:opacity-50 lg:border-b-0 lg:border-r lg:pl-6 lg:pr-6"
+              >
+                <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
+                  GitHub
+                </p>
+                <p className="text-xs font-medium md:text-sm">
+                  @roelmaoo ↗
+                </p>
+              </a>
+
+              <a
+                href="https://read.cv/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="col-span-2 py-5 transition-opacity hover:opacity-50 md:col-span-1 md:pl-6"
+              >
+                <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
+                  Read.cv
+                </p>
+                <p className="text-xs font-medium md:text-sm">
+                  /roeldoctojr ↗
+                </p>
               </a>
 
             </div>
-
           </div>
 
-        </div>
+          {/* Bottom bar */}
+          <div className="flex flex-col gap-5 border-t border-black/20 py-6 font-mono text-[9px] uppercase tracking-[0.18em] text-black/50 md:flex-row md:items-center md:justify-between">
 
-      </section>
+            <p>© 2026 Roel Docto Jr.</p>
+
+            <p className="text-left md:text-center">
+              Built with React · Tailwind CSS · Designed with intention
+            </p>
+
+            <a
+              href="#home"
+              className="w-fit transition-colors hover:text-black"
+            >
+              Back to top ↑
+            </a>
+
+          </div>
+        </div>
+      </footer>
 
     </div>
 
