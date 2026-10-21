@@ -1728,7 +1728,7 @@ function Home() {
                   LinkedIn
                 </p>
                 <p className="text-xs font-medium md:text-sm">
-                  /in/roeldocto ↗
+                  /in/roeldoctojr ↗
                 </p>
               </a>
 
@@ -1756,7 +1756,7 @@ function Home() {
                   GitHub
                 </p>
                 <p className="text-xs font-medium md:text-sm">
-                  @roeldocto ↗
+                  @roelmaoo ↗
                 </p>
               </a>
 
@@ -1770,7 +1770,7 @@ function Home() {
                   Read.cv
                 </p>
                 <p className="text-xs font-medium md:text-sm">
-                  /roeldocto ↗
+                  /roeldoctojr ↗
                 </p>
               </a>
 
