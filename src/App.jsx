@@ -1780,7 +1780,7 @@ function Home() {
           {/* Bottom bar */}
           <div className="flex flex-col gap-5 border-t border-black/20 py-6 font-mono text-[9px] uppercase tracking-[0.18em] text-black/50 md:flex-row md:items-center md:justify-between">
 
-            <p>© 2026 Roel Docto Jr.</p>
+            <p>© 2026 Roel Docto Jr</p>
 
             <p className="text-left md:text-center">
               Built with React · Tailwind CSS · Designed with intention
