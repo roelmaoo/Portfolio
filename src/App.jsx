@@ -1761,7 +1761,7 @@ function Home() {
               </a>
 
               <a
-                href="https://read.cv/"
+                href="https://youtube.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="col-span-2 py-5 transition-opacity hover:opacity-50 md:col-span-1 md:pl-6"
