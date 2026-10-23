@@ -276,10 +276,9 @@ function Home() {
 
     <section
       id="home"
-      className="min-h-[100svh] w-full px-5 md:px-10 flex items-center"
+      className="min-h-[100svh] w-full px-5 md:px-10"
     >
-      <div className="max-w-6xl mx-auto w-full py-20 md:py-32">
-
+      <div className="max-w-6xl mx-auto w-full min-h-[100svh] py-8 md:py-12 flex flex-col justify-between">
 
         {/* Main heading */}
         <h1 className="font-extrabold tracking-[-0.07em] leading-[0.85]">
@@ -292,7 +291,7 @@ function Home() {
         </h1>
 
         {/* Bottom content */}
-        <div className="mt-7 md:mt-16 flex flex-col md:flex-row md:items-end md:justify-between gap-5 md:gap-8">
+        <div className="my-8 md:my-0 flex flex-col md:flex-row md:items-end md:justify-between gap-5 md:gap-8">
 
           {/* Short introduction */}
           <p className="max-w-md text-sm md:text-lg leading-relaxed text-black/65">
@@ -322,12 +321,12 @@ function Home() {
         {/* Scroll indicator */}
         <a
           href="#about"
-          className="mt-7 md:mt-16 inline-flex items-center gap-3 text-xs font-mono uppercase tracking-[0.18em] text-black/50 hover:text-black transition-colors"
+          className="inline-flex items-center gap-3 text-xs tracking-[0.18em] text-black/50 hover:text-black transition-colors"
         >
           <span className="flex items-center justify-center w-8 h-8 rounded-full border border-black/20">
             ↓
           </span>
-          Scroll to explore
+          Scroll to Explore
         </a>
 
       </div>
@@ -1543,7 +1542,7 @@ function Home() {
               href="mailto:roeldocto8@gmail.com"
               className="group mt-12 block w-fit max-w-full"
             >
-              <span className="block text-[clamp(3.5rem,10vw,9rem)] font-black leading-[0.85] tracking-[-0.075em] text-black/40 transition-colors duration-300 group-hover:text-black/60">
+              <span className="block text-[clamp(2.8rem,10vw,9rem)] font-black leading-[0.85] tracking-[-0.075em] text-black/40 transition-colors duration-300 group-hover:text-black/60">
                 DESIGNS
               </span>
 
@@ -1558,34 +1557,6 @@ function Home() {
         {/* BOTTOM SECTION — Grainient background */}
         <div className="max-w-6xl mx-auto w-full px-5 md:px-10">
           <div className="relative isolate overflow-hidden ">
-
-            {/* Gradient background */}
-            <div className="absolute inset-0 z-0">
-              <Grainient
-                color1="#F4FDC2"
-                color2="#81903A"
-                color3="#3C4D23"
-                timeSpeed={1.25}
-                colorBalance={0.1}
-                warpStrength={10}
-                warpFrequency={1}
-                warpSpeed={2}
-                warpAmplitude={50}
-                blendAngle={0}
-                blendSoftness={1}
-                rotationAmount={500}
-                noiseScale={2}
-                grainAmount={0.1}
-                grainScale={2}
-                grainAnimated={false}
-                contrast={1.5}
-                gamma={1}HERO
-                saturation={1}
-                centerX={0}
-                centerY={0}
-                zoom={0.7}
-              />
-            </div>
 
             {/* Social links and bottom bar */}
             <div className="relative z-10">
