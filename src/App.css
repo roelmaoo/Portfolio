@@ -41,3 +41,39 @@ textarea,
 select {
   cursor: none !important;
 }
+
+
+
+@keyframes quoteFloat {
+  0%, 100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -10px;
+  }
+}
+
+.quote-float-1 {
+  animation: quoteFloat 6s ease-in-out infinite;
+}
+
+.quote-float-2 {
+  animation: quoteFloat 7s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+.quote-float-3 {
+  animation: quoteFloat 6.5s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quote-float-1,
+  .quote-float-2,
+  .quote-float-3 {
+    animation: none;
+    translate: none;
+  }
+}
+
+
