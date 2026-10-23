@@ -341,7 +341,7 @@ function Home() {
 
         {/* Home */}
 
-        <section id='home' className="absolute inset-0 w-screen h-screen">
+        <section className="absolute inset-0 w-full h-full">
 
           <p
             className="
@@ -702,6 +702,8 @@ function Home() {
       <section
         id="about"
         className="
+          box-border
+          scroll-mt-0
           z-30
           min-h-screen
           w-full
@@ -1240,6 +1242,8 @@ function Home() {
           px-5
           md:px-10
           py-16
+          box-border 
+          scroll-mt-0
         "
       >
 
@@ -1674,7 +1678,7 @@ function Home() {
 
       <footer
         id="contact"
-        className="relative w-full overflow-hidden bg-[#F5F5F0] text-black"
+        className="relative w-full overflow-hidden bg-[#F5F5F0] text-black box-border scroll-mt-0"
       >
         <div className="relative z-10 max-w-6xl mx-auto w-full">
 
