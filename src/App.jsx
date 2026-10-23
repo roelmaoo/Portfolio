@@ -48,36 +48,9 @@ import { HiArrowUpRight } from "react-icons/hi2";
 function Home() {
 
   const [isOpen, toggleIsOpen] = useState(false);
-  const [isPastHero, setIsPastHero] = useState(false);
   const [dachshundImg, setDachshundImg] = useState('');
   const [activeCategory, setActiveCategory] = useState("UI/UX");
   const [activeSlides, setActiveSlides] = useState({});
-
-
-  // ------------------------------------------------------------
-  // Detect whether user has scrolled past the hero
-  // ------------------------------------------------------------
-
-  useEffect(() => {
-
-    const handleScroll = () => {
-
-      if (window.scrollY > 900) {
-        setIsPastHero(true);
-      } else {
-        setIsPastHero(false);
-      }
-
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-
-  }, []);
-
 
   // ------------------------------------------------------------
   // Fetch random Dachshund
@@ -296,136 +269,69 @@ function Home() {
   return (
 
     <div className="selection:bg-black selection:text-white cursor-none">
+      
+    {/* ======================================================
+        HERO
+    ====================================================== */}
 
-      {/* ======================================================
-          HERO
-      ====================================================== */}
-
-      <div
-        id="home"
-        className="relative h-screen overflow-hidden"
-      >
-
-        <Grainient
-          color1="#F4FDC2"
-          color2="#81903A"
-          color3="#3C4D23"
-
-          timeSpeed={1.25}
-          colorBalance={0.1}
-          warpStrength={1}
-          warpFrequency={5}
-          warpSpeed={2}
-          warpAmplitude={50}
-
-          blendAngle={0}
-          blendSoftness={0.05}
-
-          rotationAmount={500}
-
-          noiseScale={2}
-          grainAmount={0.1}
-          grainScale={2}
-          grainAnimated={false}
-
-          contrast={1.5}
-          gamma={1}
-          saturation={1}
-
-          centerX={0}
-          centerY={0}
-
-          zoom={0.7}
-        />
+    <section
+      id="home"
+      className="min-h-[100svh] w-full px-5 md:px-10 flex items-center"
+    >
+      <div className="max-w-6xl mx-auto w-full py-20 md:py-32">
 
 
-        {/* Home */}
-
-        <section id='home' className="absolute inset-0 w-screen h-screen">
-
-          <p
-            className="
-              absolute
-              text-5xl
-              -top-2.5
-              md:-top-6
-              lg:-top-10
-              -left-3
-              md:-left-8
-              font-extrabold
-              md:text-8xl
-              lg:text-[180px]
-              tracking-[-10px]
-              md:tracking-[-25px]
-            "
-          >
-            CREATIVE
-          </p>
-
-
-          <p
-            className="
-              absolute
-              top-5
-              md:top-11
-              lg:top-20
-              -left-2
-              font-bold
-              text-4xl
-              md:text-6xl
-              lg:text-[100px]
-            "
-          >
+        {/* Main heading */}
+        <h1 className="font-extrabold tracking-[-0.07em] leading-[0.85]">
+          <span className="block text-[clamp(3.5rem,13vw,10rem)]">
+            ROEL's
+          </span>
+          <span className="block text-2xl md:text-5xl text-black/35 mt-2 md:mt-3">
             PORTFOLIO
+          </span>
+        </h1>
+
+        {/* Bottom content */}
+        <div className="mt-7 md:mt-16 flex flex-col md:flex-row md:items-end md:justify-between gap-5 md:gap-8">
+
+          {/* Short introduction */}
+          <p className="max-w-md text-sm md:text-lg leading-relaxed text-black/65">
+            I design and build thoughtful digital experiences
+            that bring together user needs, functionality,
+            and visual design.
           </p>
 
-
-          <div
-            className="
-              absolute
-              inset-0
-              md:inset-auto
-              flex
-              flex-col
-              justify-center
-              md:w-1/2
-              mx-auto
-              text-lg
-              md:text-xl
-              lg:text-2xl
-              font-semibold
-              md:bottom-0
-              md:right-0
-              p-5
-              md:p-10
-              lg:p-25
-              text-white
-              text-center
-              md:text-right
-              text-shadow-lg
-            "
-          >
-
-            <p className="text-5xl md:text-7xl">
+          {/* Quote card */}
+          <div className="w-full md:max-w-sm rounded-3xl bg-gray-50/80 backdrop-blur-md p-5 md:p-7">
+            <p className="text-2xl md:text-3xl font-serif text-[#81903A] mb-2 md:mb-3">
               “
             </p>
 
-            <p>
+            <blockquote className="text-sm md:text-lg font-medium leading-relaxed">
               Design is not just what it looks like and feels like.
               Design is how it works.
-            </p>
-            
+            </blockquote>
 
-            <p className="text-sm md:text-base mt-2">
-              - Steve Jobs
+            <p className="mt-3 md:mt-4 text-xs font-mono uppercase tracking-wider text-black/50">
+              — Steve Jobs
             </p>
-
           </div>
 
-        </section>
+        </div>
+
+        {/* Scroll indicator */}
+        <a
+          href="#about"
+          className="mt-7 md:mt-16 inline-flex items-center gap-3 text-xs font-mono uppercase tracking-[0.18em] text-black/50 hover:text-black transition-colors"
+        >
+          <span className="flex items-center justify-center w-8 h-8 rounded-full border border-black/20">
+            ↓
+          </span>
+          Scroll to explore
+        </a>
 
       </div>
-
+    </section>
 
       {/* ======================================================
           NAVBAR
@@ -469,11 +375,6 @@ function Home() {
               transition-colors
               active:bg-gray-400/40
               hover:bg-gray-300/30
-              ${
-                isPastHero
-                  ? 'text-black'
-                  : 'text-white hover:bg-gray-950/20 active:bg-gray-950/30'
-              }
             `}
             href="#home"
           >
@@ -489,11 +390,6 @@ function Home() {
               transition-colors
               active:bg-gray-400/40
               hover:bg-gray-300/30
-              ${
-                isPastHero
-                  ? 'text-black'
-                  : 'text-white hover:bg-gray-950/20 active:bg-gray-950/30'
-              }
             `}
             href="#about"
           >
@@ -509,11 +405,6 @@ function Home() {
               transition-colors
               active:bg-gray-400/40
               hover:bg-gray-300/30
-              ${
-                isPastHero
-                  ? 'text-black'
-                  : 'text-white hover:bg-gray-950/20 active:bg-gray-950/30'
-              }
             `}
             href="#projects"
           >
@@ -529,11 +420,6 @@ function Home() {
               transition-colors
               active:bg-gray-400/40
               hover:bg-gray-300/30
-              ${
-                isPastHero
-                  ? 'text-black'
-                  : 'text-white hover:bg-gray-950/20 active:bg-gray-950/30'
-              }
             `}
             href="#contact"
           >
@@ -583,7 +469,6 @@ function Home() {
                   transition-colors
                   border
                   border-gray-100/40
-                  ${isPastHero ? 'text-black border-gray-950/5' : 'text-white '}
                 `}
                 href="#home"
               >
@@ -602,7 +487,6 @@ function Home() {
                   transition-colors
                   border
                   border-gray-100/40
-                  ${isPastHero ? 'text-black border-gray-950/5' : 'text-white'}
                 `}
                 href="#about"
               >
@@ -621,7 +505,6 @@ function Home() {
                   transition-colors
                   border
                   border-gray-100/40
-                  ${isPastHero ? 'text-black border-gray-950/5' : 'text-white'}
                 `}
                 href="#projects"
               >
@@ -640,7 +523,6 @@ function Home() {
                   transition-colors
                   border
                   border-gray-100/40
-                  ${isPastHero ? 'text-black border-gray-950/5' : 'text-white'}
                 `}
                 href="#contact"
               >
@@ -702,6 +584,8 @@ function Home() {
       <section
         id="about"
         className="
+          box-border
+          scroll-mt-0
           z-30
           min-h-screen
           w-full
@@ -742,7 +626,7 @@ function Home() {
 
                 <h1
                   className="
-                    text-3xl
+                    text-2xl
                     md:text-4xl
                     lg:text-4xl
                     font-extrabold
@@ -755,7 +639,7 @@ function Home() {
 
                 <h2
                   className="
-                    text-lg
+                    text-md
                     md:text-xl
                     font-medium
                     mt-2
@@ -1010,49 +894,40 @@ function Home() {
                   <div className="w-full h-[1px] bg-black/10 my-4" />
 
 
-                  <div
-                    className="
-                      grid
-                      grid-cols-2
-                      gap-3
-                      text-xs
-                      md:text-sm
-                      h-full
-                    "
-                  >
+                  <div className="grid grid-cols-2 gap-x-3 gap-y-5 text-xs sm:text-sm h-full">
 
-                    <p className="flex items-center gap-2">
-                      <IoLogoFigma className="text-5xl" />
-                      Figma
+                    <p className="flex min-w-0 items-center gap-2">
+                      <IoLogoFigma className="shrink-0 text-3xl sm:text-4xl md:text-5xl" />
+                      <span>Figma</span>
                     </p>
 
-                    <p className="flex items-center gap-2">
-                      <CgFramer className="text-5xl" />
+                    <p className="flex min-w-0 items-center gap-2">
+                      <CgFramer className="shrink-0 text-3xl sm:text-4xl md:text-5xl" />
                       Framer
                     </p>
 
-                    <p className="flex items-center gap-2">
-                      <FaQuestionCircle className="text-5xl" />
+                    <p className="flex min-w-0 items-center gap-2">
+                      <FaQuestionCircle className="shrink-0 text-3xl sm:text-4xl md:text-5xl" />
                       Canva
                     </p>
 
-                    <p className="flex items-center gap-2">
-                      <FaWordpress className="text-5xl" />
+                    <p className="flex min-w-0 items-center gap-2">
+                      <FaWordpress className="shrink-0 text-3xl sm:text-4xl md:text-5xl" />
                       WordPress
                     </p>
 
-                    <p className="flex items-center gap-2">
-                      <IoLogoJavascript className="text-5xl" />
+                    <p className="flex min-w-0 items-center gap-2">
+                      <IoLogoJavascript className="shrink-0 text-3xl sm:text-4xl md:text-5xl" />
                       JavaScript
                     </p>
 
-                    <p className="flex items-center gap-2">
-                      <FaReact className="text-5xl" />
+                    <p className="flex min-w-0 items-center gap-2">
+                      <FaReact className="shrink-0 text-3xl sm:text-4xl md:text-5xl" />
                       ReactJS
                     </p>
 
-                    <p className="flex items-center gap-2">
-                      <RiTailwindCssFill className="text-5xl" />
+                    <p className="flex min-w-0 items-center gap-2">
+                      <RiTailwindCssFill className="shrink-0 text-3xl sm:text-4xl md:text-5xl" />
                       TailwindCSS
                     </p>
 
@@ -1240,6 +1115,8 @@ function Home() {
           px-5
           md:px-10
           py-16
+          box-border 
+          scroll-mt-0
         "
       >
 
@@ -1331,9 +1208,9 @@ function Home() {
 
                     {/* Video display */}
                     {project.video && (
-                      <div className="w-full overflow-hidden rounded-2xl bg-black">
+                      <div className="w-full min-w-0 overflow-hidden rounded-xl sm:rounded-2xl bg-black">
                         <video
-                          className="block w-full h-auto"
+                          className="block w-full max-w-full h-auto"
                           src={project.video}
                           controls
                           playsInline
@@ -1346,7 +1223,7 @@ function Home() {
 
                     {/* Image display and optional carousel */}
                     {images.length > 0 && (
-                      <div className="relative w-full md:max-w-6xl mx-auto overflow-hidden rounded-2xl bg-gray-100">
+                      <div className="relative w-full min-w-0 mx-auto overflow-hidden rounded-xl sm:rounded-2xl bg-gray-100">
                         <img
                           src={images[activeSlide]}
                           alt={project.title}
@@ -1407,14 +1284,7 @@ function Home() {
                   ============================================ */}
 
                   <div
-                    className="
-                      flex
-                      items-start
-                      md:items-center
-                      gap-4
-                      md:gap-16
-                      min-w-0
-                    "
+                    className="flex min-w-0 items-start md:items-center gap-3 sm:gap-4 md:gap-16"
                   >
 
                     {/* Project number */}
@@ -1478,33 +1348,13 @@ function Home() {
                   ============================================ */}
 
                   <div
-                    className="
-                      flex
-                      items-center
-                      justify-between
-                      md:justify-end
-                      gap-4
-                      md:gap-16
-                      mt-2
-                      md:mt-0
-                      w-full
-                      md:w-auto
-                      min-w-0
-                    "
+                    className="flex min-w-0 w-full md:w-auto flex-col sm:flex-row sm:items-center sm:justify-between md:justify-end gap-3 sm:gap-4 md:gap-16 mt-2 md:mt-0"
                   >
 
                     {/* Tags */}
 
                     <span
-                      className="
-                        text-[10px]
-                        sm:text-xs
-                        md:text-sm
-                        font-mono
-                        text-black/60
-                        tracking-wider
-                        break-words
-                      "
+                      className="min-w-0 text-[10px] sm:text-xs md:text-sm font-mono text-black/60 tracking-wider break-words"
                     >
                       {project.tags}
                     </span>
@@ -1667,18 +1517,16 @@ function Home() {
 
       </section>
 
-
       {/* ======================================================
           CONTACT / FOOTER
       ====================================================== */}
 
       <footer
         id="contact"
-        className="relative w-full overflow-hidden bg-[#F5F5F0] text-black"
+        className="relative w-full overflow-hidden bg-[#F5F5F0] text-black box-border scroll-mt-0"
       >
-        <div className="relative z-10 max-w-6xl mx-auto w-full">
-
-          {/* Main footer content */}
+        {/* TOP SECTION — Plain background */}
+        <div className="max-w-6xl mx-auto w-full px-5 md:px-10">
           <div className="py-16 md:py-20 lg:py-24">
 
             {/* Intro text */}
@@ -1692,6 +1540,7 @@ function Home() {
 
             {/* Oversized email heading */}
             <a
+              href="mailto:roeldocto8@gmail.com"
               className="group mt-12 block w-fit max-w-full"
             >
               <span className="block text-[clamp(3.5rem,10vw,9rem)] font-black leading-[0.85] tracking-[-0.075em] text-black/40 transition-colors duration-300 group-hover:text-black/60">
@@ -1703,17 +1552,55 @@ function Home() {
               </span>
             </a>
 
+          </div>
+        </div>
+
+        {/* BOTTOM SECTION — Grainient background */}
+        <div className="max-w-6xl mx-auto w-full px-5 md:px-10">
+          <div className="relative isolate overflow-hidden ">
+
+            {/* Gradient background */}
+            <div className="absolute inset-0 z-0">
+              <Grainient
+                color1="#F4FDC2"
+                color2="#81903A"
+                color3="#3C4D23"
+                timeSpeed={1.25}
+                colorBalance={0.1}
+                warpStrength={10}
+                warpFrequency={1}
+                warpSpeed={2}
+                warpAmplitude={50}
+                blendAngle={0}
+                blendSoftness={1}
+                rotationAmount={500}
+                noiseScale={2}
+                grainAmount={0.1}
+                grainScale={2}
+                grainAnimated={false}
+                contrast={1.5}
+                gamma={1}HERO
+                saturation={1}
+                centerX={0}
+                centerY={0}
+                zoom={0.7}
+              />
+            </div>
+
+            {/* Social links and bottom bar */}
+            <div className="relative z-10">
+
             {/* Social and contact links */}
-            <div className="mt-16 grid grid-cols-2 border-t border-black/70 md:grid-cols-3 lg:grid-cols-5">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-t border-black/70">
 
               <a
                 href="mailto:roeldocto8@gmail.com"
-                className="border-b border-black/20 py-5 pr-4 transition-opacity hover:opacity-50 md:border-r md:pr-6 lg:border-b-0"
+                className="min-w-0 border-b border-black/20 py-5 pr-3 sm:pr-4 transition-opacity hover:opacity-50 md:border-r md:pr-6 lg:border-b-0"
               >
                 <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
                   Email
                 </p>
-                <p className="text-xs font-medium md:text-sm">
+                <p className="text-xs font-medium md:text-sm break-words">
                   roeldocto8@gmail.com ↗
                 </p>
               </a>
@@ -1727,7 +1614,7 @@ function Home() {
                 <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
                   LinkedIn
                 </p>
-                <p className="text-xs font-medium md:text-sm">
+                <p className="text-xs font-medium md:text-sm break-words">
                   /in/roeldoctojr ↗
                 </p>
               </a>
@@ -1741,7 +1628,7 @@ function Home() {
                 <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
                   Dribbble
                 </p>
-                <p className="text-xs font-medium md:text-sm">
+                <p className="text-xs font-medium md:text-sm break-words">
                   @roeldocto ↗
                 </p>
               </a>
@@ -1755,7 +1642,7 @@ function Home() {
                 <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
                   GitHub
                 </p>
-                <p className="text-xs font-medium md:text-sm">
+                <p className="text-xs font-medium md:text-sm break-words">
                   @roelmaoo ↗
                 </p>
               </a>
@@ -1769,36 +1656,36 @@ function Home() {
                 <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
                   Read.cv
                 </p>
-                <p className="text-xs font-medium md:text-sm">
+                <p className="text-xs font-medium md:text-sm break-words">
                   /roeldoctojr ↗
                 </p>
               </a>
 
             </div>
+
+            {/* Bottom bar */}
+            <div className="flex flex-col gap-5 border-t border-black/20 py-6 font-mono text-[9px] uppercase tracking-[0.18em] text-black/50 md:flex-row md:items-center md:justify-between">
+
+              <p>© 2026 Roel Docto Jr</p>
+
+              <p className="text-left md:text-center">
+                Built with React · Tailwind CSS · Designed with intention
+              </p>
+
+              <a
+                href="#home"
+                className="w-fit transition-colors hover:text-black"
+              >
+                Back to top ↑
+              </a>
+
+            </div>
           </div>
-
-          {/* Bottom bar */}
-          <div className="flex flex-col gap-5 border-t border-black/20 py-6 font-mono text-[9px] uppercase tracking-[0.18em] text-black/50 md:flex-row md:items-center md:justify-between">
-
-            <p>© 2026 Roel Docto Jr</p>
-
-            <p className="text-left md:text-center">
-              Built with React · Tailwind CSS · Designed with intention
-            </p>
-
-            <a
-              href="#home"
-              className="w-fit transition-colors hover:text-black"
-            >
-              Back to top ↑
-            </a>
-
           </div>
         </div>
       </footer>
-
     </div>
-
+  
   );
 }
 
