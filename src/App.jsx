@@ -296,7 +296,7 @@ function Home() {
   return (
 
     <div className="selection:bg-black selection:text-white cursor-none">
-
+      
       {/* ======================================================
           HERO
       ====================================================== */}
@@ -305,92 +305,38 @@ function Home() {
         id="home"
         className="relative min-h-screen w-full overflow-hidden"
       >
+        <section className="relative min-h-screen max-w-6xl mx-auto w-full px-5 md:px-10">
 
-        {/* Home */}
-
-        <section className="relative min-h-screen max-w-6xl mx-auto w-full">
-
-          <p
-            className="
-              absolute
-              text-5xl
-              -top-2.5
-              md:-top-6
-              lg:-top-10
-              -left-3
-              md:-left-8
-              font-extrabold
-              md:text-8xl
-              lg:text-[180px]
-              tracking-[-10px]
-              md:tracking-[-25px]
-            "
-          >
-            CREATIVE
-          </p>
-
-          <p
-            className="
-              absolute
-              top-5
-              md:top-11
-              lg:top-20
-              -left-2
-              font-bold
-              text-4xl
-              md:text-6xl
-              lg:text-[100px]
-            "
-          >
-            PORTFOLIO
-          </p>
-
-
-          <div
-            className="
-              absolute
-              inset-0
-              md:inset-auto
-              flex
-              flex-col
-              justify-center
-              md:w-1/2
-              mx-auto
-              text-lg
-              md:text-xl
-              lg:text-2xl
-              font-semibold
-              md:bottom-0
-              md:right-0
-              p-5
-              md:p-10
-              lg:p-25
-              text-white
-              text-center
-              md:text-right
-              text-shadow-lg
-            "
-          >
-
-            <p className="text-5xl md:text-7xl">
-              “
+          {/* Main headings */}
+          <div className="absolute top-20 left-5 right-5 md:left-10 md:right-10 lg:top-16">
+            <p className="text-[clamp(3rem,12vw,11.25rem)] font-extrabold leading-[0.85] tracking-[-0.08em] break-words">
+              CREATIVE
             </p>
+
+            <p className="mt-2 text-[clamp(2rem,7vw,6.25rem)] font-bold leading-none tracking-tight">
+              PORTFOLIO
+            </p>
+          </div>
+
+          {/* Quote */}
+          <div className="absolute bottom-8 left-5 right-5 md:bottom-12 md:left-auto md:right-10 md:w-1/2 lg:bottom-16 flex flex-col text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white text-left md:text-right text-shadow-lg">
+
+            <p className="text-4xl md:text-7xl mb-2">“</p>
 
             <p>
               Design is not just what it looks like and feels like.
               Design is how it works.
             </p>
-            
 
-            <p className="text-sm md:text-base mt-2">
+            <p className="text-sm md:text-base mt-3">
               - Steve Jobs
             </p>
 
           </div>
 
         </section>
-
       </div>
+
 
 
       {/* ======================================================
@@ -978,49 +924,40 @@ function Home() {
                   <div className="w-full h-[1px] bg-black/10 my-4" />
 
 
-                  <div
-                    className="
-                      grid
-                      grid-cols-2
-                      gap-3
-                      text-xs
-                      md:text-sm
-                      h-full
-                    "
-                  >
+                  <div className="grid grid-cols-2 gap-x-3 gap-y-5 text-xs sm:text-sm h-full">
 
-                    <p className="flex items-center gap-2">
-                      <IoLogoFigma className="text-5xl" />
-                      Figma
+                    <p className="flex min-w-0 items-center gap-2">
+                      <IoLogoFigma className="shrink-0 text-3xl sm:text-4xl md:text-5xl" />
+                      <span>Figma</span>
                     </p>
 
-                    <p className="flex items-center gap-2">
-                      <CgFramer className="text-5xl" />
+                    <p className="flex min-w-0 items-center gap-2">
+                      <CgFramer className="shrink-0 text-3xl sm:text-4xl md:text-5xl" />
                       Framer
                     </p>
 
-                    <p className="flex items-center gap-2">
-                      <FaQuestionCircle className="text-5xl" />
+                    <p className="flex min-w-0 items-center gap-2">
+                      <FaQuestionCircle className="shrink-0 text-3xl sm:text-4xl md:text-5xl" />
                       Canva
                     </p>
 
-                    <p className="flex items-center gap-2">
-                      <FaWordpress className="text-5xl" />
+                    <p className="flex min-w-0 items-center gap-2">
+                      <FaWordpress className="shrink-0 text-3xl sm:text-4xl md:text-5xl" />
                       WordPress
                     </p>
 
-                    <p className="flex items-center gap-2">
-                      <IoLogoJavascript className="text-5xl" />
+                    <p className="flex min-w-0 items-center gap-2">
+                      <IoLogoJavascript className="shrink-0 text-3xl sm:text-4xl md:text-5xl" />
                       JavaScript
                     </p>
 
-                    <p className="flex items-center gap-2">
-                      <FaReact className="text-5xl" />
+                    <p className="flex min-w-0 items-center gap-2">
+                      <FaReact className="shrink-0 text-3xl sm:text-4xl md:text-5xl" />
                       ReactJS
                     </p>
 
-                    <p className="flex items-center gap-2">
-                      <RiTailwindCssFill className="text-5xl" />
+                    <p className="flex min-w-0 items-center gap-2">
+                      <RiTailwindCssFill className="shrink-0 text-3xl sm:text-4xl md:text-5xl" />
                       TailwindCSS
                     </p>
 
@@ -1699,7 +1636,7 @@ function Home() {
                 grainScale={2}
                 grainAnimated={false}
                 contrast={1.5}
-                gamma={1}
+                gamma={1}HERO
                 saturation={1}
                 centerX={0}
                 centerY={0}
