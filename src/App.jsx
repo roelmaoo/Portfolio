@@ -2,6 +2,7 @@ import Grainient from './components/Grainient';
 import ProjectMorph from './pages/ProjectMorph';
 import CustomCursor from './components/CustomCursor';
 import ScrollManager from './components/ScrollManager';
+import { Mascot } from 'page-mascot'
 
 // Video
 import pulsarMouseVideo from './assets/videos/PulsarMouse-CampaignAd.mov';
@@ -273,64 +274,99 @@ function Home() {
     {/* ======================================================
         HERO
     ====================================================== */}
-
+    
     <section
       id="home"
-      className="min-h-[100svh] w-full px-5 md:px-10"
+      className="relative min-h-[100svh] w-full overflow-hidden px-5 md:px-10"
     >
-      <div className="max-w-6xl mx-auto w-full min-h-[100svh] py-8 md:py-12 flex flex-col justify-between">
+      <div className="mx-auto flex min-h-[100svh] max-w-6xl flex-col py-8 md:py-12">
 
-        {/* Main heading */}
-        <h1 className="font-extrabold tracking-[-0.07em] leading-[0.85]">
-          <span className="block text-[clamp(3.5rem,13vw,10rem)]">
-            ROEL's
-          </span>
-          <span className="block text-2xl md:text-5xl text-black/35 mt-2 md:mt-3">
-            PORTFOLIO
-          </span>
-        </h1>
+        {/* MAIN HERO CONTENT */}
+        <div className="grid flex-1 grid-cols-1 gap-10 md:grid-cols-2 md:items-start md:py-10 md:gap-8">
 
-        {/* Bottom content */}
-        <div className="my-8 md:my-0 flex flex-col md:flex-row md:items-end md:justify-between gap-5 md:gap-8">
+          {/* LEFT: HEADING + INTRODUCTION */}
+          <div className="flex flex-col justify-center">
 
-          {/* Short introduction */}
-          <p className="max-w-md text-sm md:text-lg leading-relaxed text-black/65">
-            I design and build thoughtful digital experiences
-            that bring together user needs, functionality,
-            and visual design.
-          </p>
+            <h1 className="font-extrabold leading-[0.85] tracking-[-0.07em]">
+              <span className="block text-[clamp(3.5rem,10vw,8rem)]">
+                ROEL's
+              </span>
 
-          {/* Quote card */}
-          <div className="w-full md:max-w-sm rounded-3xl bg-gray-50/80 backdrop-blur-md p-5 md:p-7">
-            <p className="text-2xl md:text-3xl font-serif text-[#81903A] mb-2 md:mb-3">
-              “
+              <span className="mt-2 block text-2xl text-black/35 md:mt-3 md:text-5xl">
+                PORTFOLIO
+              </span>
+            </h1>
+
+            {/* Introduction sits just below the heading */}
+            <p className="mt-8 max-w-md text-sm leading-relaxed text-black/65 md:mt-10 md:text-lg">
+              I design and build thoughtful digital experiences
+              that bring together user needs, functionality,
+              and visual design.
             </p>
+          </div>
 
-            <blockquote className="text-sm md:text-lg font-medium leading-relaxed">
-              Design is not just what it looks like and feels like.
-              Design is how it works.
-            </blockquote>
+          {/* RIGHT: FLOATING QUOTE CARDS */}
+          <div className="flex flex-col gap-4 md:relative md:justify-center md:py-20">
 
-            <p className="mt-3 md:mt-4 text-xs font-mono uppercase tracking-wider text-black/50">
-              — Steve Jobs
-            </p>
+            <div className="quote-float quote-float-1 w-full rounded-3xl bg-gray-50/85 p-5 shadow-sm backdrop-blur-md md:ml-auto md:max-w-sm md:-rotate-2 md:p-6">
+              <p className="mb-2 font-serif text-3xl text-[#81903A]">“</p>
+              <blockquote className="text-sm font-medium leading-relaxed md:text-base">
+                Design is not just what it looks like and feels like.
+                Design is how it works.
+              </blockquote>
+              <p className="mt-3 text-[10px]  tracking-wider text-black/50">
+                — Steve Jobs
+              </p>
+            </div>
+
+            <div className="quote-float quote-float-2 w-full rounded-3xl bg-[#E8EDCF]/90 p-5 shadow-sm backdrop-blur-md md:ml-8 md:max-w-sm md:rotate-2 md:p-6">
+              <p className="mb-2 font-serif text-3xl text-[#81903A]">“</p>
+              <blockquote className="text-sm font-medium leading-relaxed md:text-base">
+                Good design is as little design as possible.
+              </blockquote>
+              <p className="mt-3 text-[10px] tracking-wider text-black/50">
+                — Dieter Rams
+              </p>
+            </div>
+
+            <div className="quote-float quote-float-3 w-full rounded-3xl bg-gray-50/85 p-5 shadow-sm backdrop-blur-md md:ml-auto md:max-w-sm md:-rotate-1 md:p-6">
+              <p className="mb-2 font-serif text-3xl text-[#81903A]">“</p>
+              <blockquote className="text-sm font-medium leading-relaxed md:text-base">
+                The details are not the details. They make the design.
+              </blockquote>
+              <p className="mt-3 text-[10px] tracking-wider text-black/50">
+                — Charles Eames
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        {/* BOTTOM: SCROLL INDICATOR + MASCOT */}
+        <div className="mt-10 flex items-center justify-between gap-4 md:mt-6">
+
+          <a
+            href="#about"
+            className="inline-flex shrink-0 items-center gap-3 text-xs tracking-[0.18em] text-black/50 transition-colors hover:text-black md:text-sm"
+          >
+            <span className="flex h-8 w-8 items-center justify-center rounded-full border border-black/20 transition-colors hover:bg-black hover:text-white">
+              ↓
+            </span>
+            Scroll to Explore
+          </a>
+
+          <div className="flex min-w-0 items-end justify-end">
+            <Mascot
+              directions="/mascots/pug-directions.webp"
+              reactions="/mascots/pug-reactions.webp"
+            />
           </div>
 
         </div>
 
-        {/* Scroll indicator */}
-        <a
-          href="#about"
-          className="inline-flex items-center gap-3 text-xs tracking-[0.18em] text-black/50 hover:text-black transition-colors"
-        >
-          <span className="flex items-center justify-center w-8 h-8 rounded-full border border-black/20">
-            ↓
-          </span>
-          Scroll to Explore
-        </a>
-
       </div>
     </section>
+
 
       {/* ======================================================
           NAVBAR
