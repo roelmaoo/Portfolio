@@ -1637,7 +1637,6 @@ function Home() {
 
       </section>
 
-
       {/* ======================================================
           CONTACT / FOOTER
       ====================================================== */}
@@ -1646,9 +1645,8 @@ function Home() {
         id="contact"
         className="relative w-full overflow-hidden bg-[#F5F5F0] text-black box-border scroll-mt-0"
       >
-        <div className="relative z-10 max-w-6xl mx-auto w-full">
-
-          {/* Main footer content */}
+        {/* TOP SECTION — Plain background */}
+        <div className="max-w-6xl mx-auto w-full px-5 md:px-10">
           <div className="py-16 md:py-20 lg:py-24">
 
             {/* Intro text */}
@@ -1662,6 +1660,7 @@ function Home() {
 
             {/* Oversized email heading */}
             <a
+              href="mailto:roeldocto8@gmail.com"
               className="group mt-12 block w-fit max-w-full"
             >
               <span className="block text-[clamp(3.5rem,10vw,9rem)] font-black leading-[0.85] tracking-[-0.075em] text-black/40 transition-colors duration-300 group-hover:text-black/60">
@@ -1673,107 +1672,115 @@ function Home() {
               </span>
             </a>
 
-            <div className="relative overflow-hidden">
-              <div className="absolute inset-0 z-0">
-                <Grainient
-                  color1="#F4FDC2"
-                  color2="#81903A"
-                  color3="#3C4D23"
-                  timeSpeed={1.25}
-                  colorBalance={0.1}
-                  warpStrength={1}
-                  warpFrequency={5}
-                  warpSpeed={2}
-                  warpAmplitude={50}
-                  blendAngle={0}
-                  blendSoftness={0.05}
-                  rotationAmount={500}
-                  noiseScale={2}
-                  grainAmount={0.1}
-                  grainScale={2}
-                  grainAnimated={false}
-                  contrast={1.5}
-                  gamma={1}
-                  saturation={1}
-                  centerX={0}
-                  centerY={0}
-                  zoom={0.7}
-                />
-              </div>
+          </div>
+        </div>
 
-            <div className="relative z-10 max-w-6xl mx-auto w-full px-5 md:px-10">
-              {/* Social and contact links */}
-              <div className="mt-16 grid grid-cols-2 border-t border-black/70 md:grid-cols-3 lg:grid-cols-5">
+        {/* BOTTOM SECTION — Grainient background */}
+        <div className="max-w-6xl mx-auto w-full px-5 md:px-10">
+          <div className="relative isolate overflow-hidden ">
 
-                <a
-                  href="mailto:roeldocto8@gmail.com"
-                  className="border-b border-black/20 py-5 pr-4 transition-opacity hover:opacity-50 md:border-r md:pr-6 lg:border-b-0"
-                >
-                  <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
-                    Email
-                  </p>
-                  <p className="text-xs font-medium md:text-sm">
-                    roeldocto8@gmail.com ↗
-                  </p>
-                </a>
+            {/* Gradient background */}
+            <div className="absolute inset-0 z-0">
+              <Grainient
+                color1="#F4FDC2"
+                color2="#81903A"
+                color3="#3C4D23"
+                timeSpeed={1.25}
+                colorBalance={0.1}
+                warpStrength={10}
+                warpFrequency={1}
+                warpSpeed={2}
+                warpAmplitude={50}
+                blendAngle={0}
+                blendSoftness={1}
+                rotationAmount={500}
+                noiseScale={2}
+                grainAmount={0.1}
+                grainScale={2}
+                grainAnimated={false}
+                contrast={1.5}
+                gamma={1}
+                saturation={1}
+                centerX={0}
+                centerY={0}
+                zoom={0.7}
+              />
+            </div>
 
-                <a
-                  href="https://www.linkedin.com/in/roeldoctojr/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-b border-black/20 py-5 pl-4 transition-opacity hover:opacity-50 md:border-r md:px-6 lg:border-b-0"
-                >
-                  <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
-                    LinkedIn
-                  </p>
-                  <p className="text-xs font-medium md:text-sm">
-                    /in/roeldoctojr ↗
-                  </p>
-                </a>
+            {/* Social links and bottom bar */}
+            <div className="relative z-10">
 
-                <a
-                  href="https://dribbble.com/roeldocto"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-b border-black/20 py-5 pr-4 transition-opacity hover:opacity-50 md:border-r md:pl-6 lg:border-b-0"
-                >
-                  <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
-                    Dribbble
-                  </p>
-                  <p className="text-xs font-medium md:text-sm">
-                    @roeldocto ↗
-                  </p>
-                </a>
+            {/* Social and contact links */}
+            <div className="mt-0 grid grid-cols-2 border-t border-black/70 md:grid-cols-3 lg:grid-cols-5">
 
-                <a
-                  href="https://github.com/roeldocto"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="border-b border-black/20 py-5 pl-4 transition-opacity hover:opacity-50 lg:border-b-0 lg:border-r lg:pl-6 lg:pr-6"
-                >
-                  <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
-                    GitHub
-                  </p>
-                  <p className="text-xs font-medium md:text-sm">
-                    @roelmaoo ↗
-                  </p>
-                </a>
+              <a
+                href="mailto:roeldocto8@gmail.com"
+                className="border-b border-black/20 py-5 pr-4 transition-opacity hover:opacity-50 md:border-r md:pr-6 lg:border-b-0"
+              >
+                <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
+                  Email
+                </p>
+                <p className="text-xs font-medium md:text-sm">
+                  roeldocto8@gmail.com ↗
+                </p>
+              </a>
 
-                <a
-                  href="https://youtube.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="col-span-2 py-5 transition-opacity hover:opacity-50 md:col-span-1 md:pl-6"
-                >
-                  <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
-                    Read.cv
-                  </p>
-                  <p className="text-xs font-medium md:text-sm">
-                    /roeldoctojr ↗
-                  </p>
-                </a>
+              <a
+                href="https://www.linkedin.com/in/roeldoctojr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-b border-black/20 py-5 pl-4 transition-opacity hover:opacity-50 md:border-r md:px-6 lg:border-b-0"
+              >
+                <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
+                  LinkedIn
+                </p>
+                <p className="text-xs font-medium md:text-sm">
+                  /in/roeldoctojr ↗
+                </p>
+              </a>
 
-              </div>
+              <a
+                href="https://dribbble.com/roeldocto"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-b border-black/20 py-5 pr-4 transition-opacity hover:opacity-50 md:border-r md:pl-6 lg:border-b-0"
+              >
+                <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
+                  Dribbble
+                </p>
+                <p className="text-xs font-medium md:text-sm">
+                  @roeldocto ↗
+                </p>
+              </a>
+
+              <a
+                href="https://github.com/roeldocto"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-b border-black/20 py-5 pl-4 transition-opacity hover:opacity-50 lg:border-b-0 lg:border-r lg:pl-6 lg:pr-6"
+              >
+                <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
+                  GitHub
+                </p>
+                <p className="text-xs font-medium md:text-sm">
+                  @roelmaoo ↗
+                </p>
+              </a>
+
+              <a
+                href="https://youtube.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="col-span-2 py-5 transition-opacity hover:opacity-50 md:col-span-1 md:pl-6"
+              >
+                <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
+                  Read.cv
+                </p>
+                <p className="text-xs font-medium md:text-sm">
+                  /roeldoctojr ↗
+                </p>
+              </a>
+
             </div>
 
             {/* Bottom bar */}
@@ -1791,9 +1798,10 @@ function Home() {
               >
                 Back to top ↑
               </a>
+
             </div>
           </div>
-        </div>
+          </div>
         </div>
       </footer>
     </div>
