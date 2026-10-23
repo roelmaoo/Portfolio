@@ -8,14 +8,17 @@
 }
 
 
+
 html {
-    color: var(--color-black); 
-    scroll-behavior: smooth;
-    scroll-padding: 80px;
-    &::-webkit-scrollbar {
-        display: none;
-    }
+  color: var(--color-black);
+  scroll-behavior: smooth;
+  scroll-padding-top: 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
+
 
 html,
 body {
