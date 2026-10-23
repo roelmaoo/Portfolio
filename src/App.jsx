@@ -303,45 +303,12 @@ function Home() {
 
       <div
         id="home"
-        className="relative h-screen overflow-hidden"
+        className="relative min-h-screen w-full overflow-hidden"
       >
-
-        <Grainient
-          color1="#F4FDC2"
-          color2="#81903A"
-          color3="#3C4D23"
-
-          timeSpeed={1.25}
-          colorBalance={0.1}
-          warpStrength={1}
-          warpFrequency={5}
-          warpSpeed={2}
-          warpAmplitude={50}
-
-          blendAngle={0}
-          blendSoftness={0.05}
-
-          rotationAmount={500}
-
-          noiseScale={2}
-          grainAmount={0.1}
-          grainScale={2}
-          grainAnimated={false}
-
-          contrast={1.5}
-          gamma={1}
-          saturation={1}
-
-          centerX={0}
-          centerY={0}
-
-          zoom={0.7}
-        />
-
 
         {/* Home */}
 
-        <section className="absolute inset-0 w-full h-full">
+        <section className="relative min-h-screen max-w-6xl mx-auto w-full">
 
           <p
             className="
@@ -361,7 +328,6 @@ function Home() {
           >
             CREATIVE
           </p>
-
 
           <p
             className="
@@ -1707,102 +1673,131 @@ function Home() {
               </span>
             </a>
 
-            {/* Social and contact links */}
-            <div className="mt-16 grid grid-cols-2 border-t border-black/70 md:grid-cols-3 lg:grid-cols-5">
+            <div className="relative overflow-hidden">
+              <div className="absolute inset-0 z-0">
+                <Grainient
+                  color1="#F4FDC2"
+                  color2="#81903A"
+                  color3="#3C4D23"
+                  timeSpeed={1.25}
+                  colorBalance={0.1}
+                  warpStrength={1}
+                  warpFrequency={5}
+                  warpSpeed={2}
+                  warpAmplitude={50}
+                  blendAngle={0}
+                  blendSoftness={0.05}
+                  rotationAmount={500}
+                  noiseScale={2}
+                  grainAmount={0.1}
+                  grainScale={2}
+                  grainAnimated={false}
+                  contrast={1.5}
+                  gamma={1}
+                  saturation={1}
+                  centerX={0}
+                  centerY={0}
+                  zoom={0.7}
+                />
+              </div>
+
+            <div className="relative z-10 max-w-6xl mx-auto w-full px-5 md:px-10">
+              {/* Social and contact links */}
+              <div className="mt-16 grid grid-cols-2 border-t border-black/70 md:grid-cols-3 lg:grid-cols-5">
+
+                <a
+                  href="mailto:roeldocto8@gmail.com"
+                  className="border-b border-black/20 py-5 pr-4 transition-opacity hover:opacity-50 md:border-r md:pr-6 lg:border-b-0"
+                >
+                  <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
+                    Email
+                  </p>
+                  <p className="text-xs font-medium md:text-sm">
+                    roeldocto8@gmail.com ↗
+                  </p>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/roeldoctojr/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-b border-black/20 py-5 pl-4 transition-opacity hover:opacity-50 md:border-r md:px-6 lg:border-b-0"
+                >
+                  <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
+                    LinkedIn
+                  </p>
+                  <p className="text-xs font-medium md:text-sm">
+                    /in/roeldoctojr ↗
+                  </p>
+                </a>
+
+                <a
+                  href="https://dribbble.com/roeldocto"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-b border-black/20 py-5 pr-4 transition-opacity hover:opacity-50 md:border-r md:pl-6 lg:border-b-0"
+                >
+                  <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
+                    Dribbble
+                  </p>
+                  <p className="text-xs font-medium md:text-sm">
+                    @roeldocto ↗
+                  </p>
+                </a>
+
+                <a
+                  href="https://github.com/roeldocto"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border-b border-black/20 py-5 pl-4 transition-opacity hover:opacity-50 lg:border-b-0 lg:border-r lg:pl-6 lg:pr-6"
+                >
+                  <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
+                    GitHub
+                  </p>
+                  <p className="text-xs font-medium md:text-sm">
+                    @roelmaoo ↗
+                  </p>
+                </a>
+
+                <a
+                  href="https://youtube.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="col-span-2 py-5 transition-opacity hover:opacity-50 md:col-span-1 md:pl-6"
+                >
+                  <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
+                    Read.cv
+                  </p>
+                  <p className="text-xs font-medium md:text-sm">
+                    /roeldoctojr ↗
+                  </p>
+                </a>
+
+              </div>
+            </div>
+
+            {/* Bottom bar */}
+            <div className="flex flex-col gap-5 border-t border-black/20 py-6 font-mono text-[9px] uppercase tracking-[0.18em] text-black/50 md:flex-row md:items-center md:justify-between">
+
+              <p>© 2026 Roel Docto Jr</p>
+
+              <p className="text-left md:text-center">
+                Built with React · Tailwind CSS · Designed with intention
+              </p>
 
               <a
-                href="mailto:roeldocto8@gmail.com"
-                className="border-b border-black/20 py-5 pr-4 transition-opacity hover:opacity-50 md:border-r md:pr-6 lg:border-b-0"
+                href="#home"
+                className="w-fit transition-colors hover:text-black"
               >
-                <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
-                  Email
-                </p>
-                <p className="text-xs font-medium md:text-sm">
-                  roeldocto8@gmail.com ↗
-                </p>
+                Back to top ↑
               </a>
-
-              <a
-                href="https://www.linkedin.com/in/roeldoctojr/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-b border-black/20 py-5 pl-4 transition-opacity hover:opacity-50 md:border-r md:px-6 lg:border-b-0"
-              >
-                <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
-                  LinkedIn
-                </p>
-                <p className="text-xs font-medium md:text-sm">
-                  /in/roeldoctojr ↗
-                </p>
-              </a>
-
-              <a
-                href="https://dribbble.com/roeldocto"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-b border-black/20 py-5 pr-4 transition-opacity hover:opacity-50 md:border-r md:pl-6 lg:border-b-0"
-              >
-                <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
-                  Dribbble
-                </p>
-                <p className="text-xs font-medium md:text-sm">
-                  @roeldocto ↗
-                </p>
-              </a>
-
-              <a
-                href="https://github.com/roeldocto"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border-b border-black/20 py-5 pl-4 transition-opacity hover:opacity-50 lg:border-b-0 lg:border-r lg:pl-6 lg:pr-6"
-              >
-                <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
-                  GitHub
-                </p>
-                <p className="text-xs font-medium md:text-sm">
-                  @roelmaoo ↗
-                </p>
-              </a>
-
-              <a
-                href="https://youtube.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="col-span-2 py-5 transition-opacity hover:opacity-50 md:col-span-1 md:pl-6"
-              >
-                <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
-                  Read.cv
-                </p>
-                <p className="text-xs font-medium md:text-sm">
-                  /roeldoctojr ↗
-                </p>
-              </a>
-
             </div>
           </div>
-
-          {/* Bottom bar */}
-          <div className="flex flex-col gap-5 border-t border-black/20 py-6 font-mono text-[9px] uppercase tracking-[0.18em] text-black/50 md:flex-row md:items-center md:justify-between">
-
-            <p>© 2026 Roel Docto Jr</p>
-
-            <p className="text-left md:text-center">
-              Built with React · Tailwind CSS · Designed with intention
-            </p>
-
-            <a
-              href="#home"
-              className="w-fit transition-colors hover:text-black"
-            >
-              Back to top ↑
-            </a>
-
-          </div>
+        </div>
         </div>
       </footer>
-
     </div>
-
+  
   );
 }
 
