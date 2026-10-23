@@ -48,36 +48,9 @@ import { HiArrowUpRight } from "react-icons/hi2";
 function Home() {
 
   const [isOpen, toggleIsOpen] = useState(false);
-  const [isPastHero, setIsPastHero] = useState(false);
   const [dachshundImg, setDachshundImg] = useState('');
   const [activeCategory, setActiveCategory] = useState("UI/UX");
   const [activeSlides, setActiveSlides] = useState({});
-
-
-  // ------------------------------------------------------------
-  // Detect whether user has scrolled past the hero
-  // ------------------------------------------------------------
-
-  useEffect(() => {
-
-    const handleScroll = () => {
-
-      if (window.scrollY > 900) {
-        setIsPastHero(true);
-      } else {
-        setIsPastHero(false);
-      }
-
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-
-  }, []);
-
 
   // ------------------------------------------------------------
   // Fetch random Dachshund
@@ -297,47 +270,68 @@ function Home() {
 
     <div className="selection:bg-black selection:text-white cursor-none">
       
-      {/* ======================================================
-          HERO
-      ====================================================== */}
+    {/* ======================================================
+        HERO
+    ====================================================== */}
 
-      <div
-        id="home"
-        className="relative min-h-screen w-full overflow-hidden"
-      >
-        <section className="relative min-h-screen max-w-6xl mx-auto w-full px-5 md:px-10">
+    <section
+      id="home"
+      className="min-h-[100svh] w-full px-5 md:px-10 flex items-center"
+    >
+      <div className="max-w-6xl mx-auto w-full py-20 md:py-32">
 
-          {/* Main headings */}
-          <div className="absolute top-20 left-5 right-5 md:left-10 md:right-10 lg:top-16">
-            <p className="text-[clamp(3rem,12vw,11.25rem)] font-extrabold leading-[0.85] tracking-[-0.08em] break-words">
-              CREATIVE
+
+        {/* Main heading */}
+        <h1 className="font-extrabold tracking-[-0.07em] leading-[0.85]">
+          <span className="block text-[clamp(3.5rem,13vw,10rem)]">
+            ROEL's
+          </span>
+          <span className="block text-2xl md:text-5xl text-black/35 mt-2 md:mt-3">
+            PORTFOLIO
+          </span>
+        </h1>
+
+        {/* Bottom content */}
+        <div className="mt-7 md:mt-16 flex flex-col md:flex-row md:items-end md:justify-between gap-5 md:gap-8">
+
+          {/* Short introduction */}
+          <p className="max-w-md text-sm md:text-lg leading-relaxed text-black/65">
+            I design and build thoughtful digital experiences
+            that bring together user needs, functionality,
+            and visual design.
+          </p>
+
+          {/* Quote card */}
+          <div className="w-full md:max-w-sm rounded-3xl bg-gray-50/80 backdrop-blur-md p-5 md:p-7">
+            <p className="text-2xl md:text-3xl font-serif text-[#81903A] mb-2 md:mb-3">
+              “
             </p>
 
-            <p className="mt-2 text-[clamp(2rem,7vw,6.25rem)] font-bold leading-none tracking-tight">
-              PORTFOLIO
-            </p>
-          </div>
-
-          {/* Quote */}
-          <div className="absolute bottom-8 left-5 right-5 md:bottom-12 md:left-auto md:right-10 md:w-1/2 lg:bottom-16 flex flex-col text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-white text-left md:text-right text-shadow-lg">
-
-            <p className="text-4xl md:text-7xl mb-2">“</p>
-
-            <p>
+            <blockquote className="text-sm md:text-lg font-medium leading-relaxed">
               Design is not just what it looks like and feels like.
               Design is how it works.
-            </p>
+            </blockquote>
 
-            <p className="text-sm md:text-base mt-3">
-              - Steve Jobs
+            <p className="mt-3 md:mt-4 text-xs font-mono uppercase tracking-wider text-black/50">
+              — Steve Jobs
             </p>
-
           </div>
 
-        </section>
+        </div>
+
+        {/* Scroll indicator */}
+        <a
+          href="#about"
+          className="mt-7 md:mt-16 inline-flex items-center gap-3 text-xs font-mono uppercase tracking-[0.18em] text-black/50 hover:text-black transition-colors"
+        >
+          <span className="flex items-center justify-center w-8 h-8 rounded-full border border-black/20">
+            ↓
+          </span>
+          Scroll to explore
+        </a>
+
       </div>
-
-
+    </section>
 
       {/* ======================================================
           NAVBAR
@@ -381,11 +375,6 @@ function Home() {
               transition-colors
               active:bg-gray-400/40
               hover:bg-gray-300/30
-              ${
-                isPastHero
-                  ? 'text-black'
-                  : 'text-white hover:bg-gray-950/20 active:bg-gray-950/30'
-              }
             `}
             href="#home"
           >
@@ -401,11 +390,6 @@ function Home() {
               transition-colors
               active:bg-gray-400/40
               hover:bg-gray-300/30
-              ${
-                isPastHero
-                  ? 'text-black'
-                  : 'text-white hover:bg-gray-950/20 active:bg-gray-950/30'
-              }
             `}
             href="#about"
           >
@@ -421,11 +405,6 @@ function Home() {
               transition-colors
               active:bg-gray-400/40
               hover:bg-gray-300/30
-              ${
-                isPastHero
-                  ? 'text-black'
-                  : 'text-white hover:bg-gray-950/20 active:bg-gray-950/30'
-              }
             `}
             href="#projects"
           >
@@ -441,11 +420,6 @@ function Home() {
               transition-colors
               active:bg-gray-400/40
               hover:bg-gray-300/30
-              ${
-                isPastHero
-                  ? 'text-black'
-                  : 'text-white hover:bg-gray-950/20 active:bg-gray-950/30'
-              }
             `}
             href="#contact"
           >
@@ -652,7 +626,7 @@ function Home() {
 
                 <h1
                   className="
-                    text-3xl
+                    text-2xl
                     md:text-4xl
                     lg:text-4xl
                     font-extrabold
@@ -665,7 +639,7 @@ function Home() {
 
                 <h2
                   className="
-                    text-lg
+                    text-md
                     md:text-xl
                     font-medium
                     mt-2
