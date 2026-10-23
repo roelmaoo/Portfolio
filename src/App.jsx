@@ -495,7 +495,6 @@ function Home() {
                   transition-colors
                   border
                   border-gray-100/40
-                  ${isPastHero ? 'text-black border-gray-950/5' : 'text-white '}
                 `}
                 href="#home"
               >
@@ -514,7 +513,6 @@ function Home() {
                   transition-colors
                   border
                   border-gray-100/40
-                  ${isPastHero ? 'text-black border-gray-950/5' : 'text-white'}
                 `}
                 href="#about"
               >
@@ -533,7 +531,6 @@ function Home() {
                   transition-colors
                   border
                   border-gray-100/40
-                  ${isPastHero ? 'text-black border-gray-950/5' : 'text-white'}
                 `}
                 href="#projects"
               >
@@ -552,7 +549,6 @@ function Home() {
                   transition-colors
                   border
                   border-gray-100/40
-                  ${isPastHero ? 'text-black border-gray-950/5' : 'text-white'}
                 `}
                 href="#contact"
               >
@@ -1238,9 +1234,9 @@ function Home() {
 
                     {/* Video display */}
                     {project.video && (
-                      <div className="w-full overflow-hidden rounded-2xl bg-black">
+                      <div className="w-full min-w-0 overflow-hidden rounded-xl sm:rounded-2xl bg-black">
                         <video
-                          className="block w-full h-auto"
+                          className="block w-full max-w-full h-auto"
                           src={project.video}
                           controls
                           playsInline
@@ -1253,7 +1249,7 @@ function Home() {
 
                     {/* Image display and optional carousel */}
                     {images.length > 0 && (
-                      <div className="relative w-full md:max-w-6xl mx-auto overflow-hidden rounded-2xl bg-gray-100">
+                      <div className="relative w-full min-w-0 mx-auto overflow-hidden rounded-xl sm:rounded-2xl bg-gray-100">
                         <img
                           src={images[activeSlide]}
                           alt={project.title}
@@ -1314,14 +1310,7 @@ function Home() {
                   ============================================ */}
 
                   <div
-                    className="
-                      flex
-                      items-start
-                      md:items-center
-                      gap-4
-                      md:gap-16
-                      min-w-0
-                    "
+                    className="flex min-w-0 items-start md:items-center gap-3 sm:gap-4 md:gap-16"
                   >
 
                     {/* Project number */}
@@ -1385,33 +1374,13 @@ function Home() {
                   ============================================ */}
 
                   <div
-                    className="
-                      flex
-                      items-center
-                      justify-between
-                      md:justify-end
-                      gap-4
-                      md:gap-16
-                      mt-2
-                      md:mt-0
-                      w-full
-                      md:w-auto
-                      min-w-0
-                    "
+                    className="flex min-w-0 w-full md:w-auto flex-col sm:flex-row sm:items-center sm:justify-between md:justify-end gap-3 sm:gap-4 md:gap-16 mt-2 md:mt-0"
                   >
 
                     {/* Tags */}
 
                     <span
-                      className="
-                        text-[10px]
-                        sm:text-xs
-                        md:text-sm
-                        font-mono
-                        text-black/60
-                        tracking-wider
-                        break-words
-                      "
+                      className="min-w-0 text-[10px] sm:text-xs md:text-sm font-mono text-black/60 tracking-wider break-words"
                     >
                       {project.tags}
                     </span>
@@ -1648,16 +1617,16 @@ function Home() {
             <div className="relative z-10">
 
             {/* Social and contact links */}
-            <div className="mt-0 grid grid-cols-2 border-t border-black/70 md:grid-cols-3 lg:grid-cols-5">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 border-t border-black/70">
 
               <a
                 href="mailto:roeldocto8@gmail.com"
-                className="border-b border-black/20 py-5 pr-4 transition-opacity hover:opacity-50 md:border-r md:pr-6 lg:border-b-0"
+                className="min-w-0 border-b border-black/20 py-5 pr-3 sm:pr-4 transition-opacity hover:opacity-50 md:border-r md:pr-6 lg:border-b-0"
               >
                 <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
                   Email
                 </p>
-                <p className="text-xs font-medium md:text-sm">
+                <p className="text-xs font-medium md:text-sm break-words">
                   roeldocto8@gmail.com ↗
                 </p>
               </a>
@@ -1671,7 +1640,7 @@ function Home() {
                 <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
                   LinkedIn
                 </p>
-                <p className="text-xs font-medium md:text-sm">
+                <p className="text-xs font-medium md:text-sm break-words">
                   /in/roeldoctojr ↗
                 </p>
               </a>
@@ -1685,7 +1654,7 @@ function Home() {
                 <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
                   Dribbble
                 </p>
-                <p className="text-xs font-medium md:text-sm">
+                <p className="text-xs font-medium md:text-sm break-words">
                   @roeldocto ↗
                 </p>
               </a>
@@ -1699,7 +1668,7 @@ function Home() {
                 <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
                   GitHub
                 </p>
-                <p className="text-xs font-medium md:text-sm">
+                <p className="text-xs font-medium md:text-sm break-words">
                   @roelmaoo ↗
                 </p>
               </a>
@@ -1713,7 +1682,7 @@ function Home() {
                 <p className="mb-3 font-mono text-[9px] uppercase tracking-[0.2em] text-black/50">
                   Read.cv
                 </p>
-                <p className="text-xs font-medium md:text-sm">
+                <p className="text-xs font-medium md:text-sm break-words">
                   /roeldoctojr ↗
                 </p>
               </a>
