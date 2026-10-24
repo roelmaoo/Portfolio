@@ -413,7 +413,7 @@ function Home() {
             `}
             href="#home"
           >
-            About
+            Home
           </a>
 
 
@@ -428,7 +428,7 @@ function Home() {
             `}
             href="#about"
           >
-            Home
+            About
           </a>
 
 
