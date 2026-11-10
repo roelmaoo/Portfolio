@@ -1,6 +1,5 @@
 import Grainient from './components/Grainient';
 import ProjectMorph from './pages/ProjectMorph';
-import CustomCursor from './components/CustomCursor';
 import ScrollManager from './components/ScrollManager';
 import { Mascot } from 'page-mascot'
 
@@ -269,7 +268,7 @@ function Home() {
 
   return (
 
-    <div className="selection:bg-black selection:text-white cursor-none">
+    <div className="selection:bg-black selection:text-white">
       
     {/* ======================================================
         HERO
@@ -1706,7 +1705,6 @@ export default function App() {
   return (
   
     <BrowserRouter>
-      <CustomCursor />
       <ScrollManager />
       <Routes>
 
