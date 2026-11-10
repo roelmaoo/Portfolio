@@ -19,7 +19,6 @@ html {
   }
 }
 
-
 html,
 body {
   width: 100%;
@@ -31,18 +30,6 @@ body {
   from { width: 0%; }
   to { width: 100%; }
 }
-
-html,
-body,
-button,
-a,
-input,
-textarea,
-select {
-  cursor: none !important;
-}
-
-
 
 @keyframes quoteFloat {
   0%, 100% {
