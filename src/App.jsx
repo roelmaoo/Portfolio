@@ -699,7 +699,7 @@ function Home() {
 
                   <p>
                     Computer Science Graduate with a strong
-                    foundation in Human-Computer Interaction.
+                    
                   </p>
 
                   <p>
